@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="penGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="circuitGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.6" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fountain pen with tech elements -->
+  <g transform="translate(10, 20)">
+    <!-- Pen body with gradient -->
+    <path d="M5 20 L35 10 L35 30 L5 40 Z" fill="url(#penGradient)" stroke="#1e40af" stroke-width="1"/>
+    
+    <!-- Pen tip -->
+    <path d="M35 15 L42 18 L42 22 L35 25 Z" fill="#1e40af"/>
+    
+    <!-- Tech circuit lines flowing from pen -->
+    <g stroke="url(#circuitGradient)" stroke-width="1.5" fill="none">
+      <path d="M42 20 L55 20 L60 15 L65 15" opacity="0.8">
+        <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
+      </path>
+      <path d="M42 20 L55 20 L60 25 L65 25" opacity="0.8">
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
+      </path>
+      <path d="M42 20 L50 12 L58 12 L63 7" opacity="0.6">
+        <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2.5s" repeatCount="indefinite"/>
+      </path>
+      <path d="M42 20 L50 28 L58 28 L63 33" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.5s" repeatCount="indefinite"/>
+      </path>
+    </g>
+    
+    <!-- Circuit nodes with glow effect -->
+    <circle cx="65" cy="15" r="2" fill="#3b82f6">
+      <animate attributeName="r" values="2;3;2" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="65" cy="25" r="2" fill="#3b82f6">
+      <animate attributeName="r" values="3;2;3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="63" cy="7" r="1.5" fill="#6366f1" opacity="0.8"/>
+    <circle cx="63" cy="33" r="1.5" fill="#6366f1" opacity="0.8"/>
+    
+    <!-- Additional floating particles -->
+    <circle cx="70" cy="12" r="1" fill="#8b5cf6" opacity="0.6">
+      <animate attributeName="cy" values="12;8;12" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="68" cy="28" r="1" fill="#8b5cf6" opacity="0.6">
+      <animate attributeName="cy" values="28;32;28" dur="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simplified pen icon for favicon -->
+  <g transform="translate(4, 8)">
+    <!-- Pen body -->
+    <path d="M2 8 L16 4 L16 12 L2 16 Z" fill="#2563eb"/>
+    <!-- Pen tip -->
+    <path d="M16 6 L20 8 L20 10 L16 10 Z" fill="#1e40af"/>
+    <!-- Tech elements -->
+    <circle cx="22" cy="6" r="1" fill="#6366f1"/>
+    <circle cx="22" cy="10" r="1" fill="#6366f1"/>
+    <path d="M20 8 L22 8" stroke="#2563eb" stroke-width="1"/>
+  </g>
+</svg>

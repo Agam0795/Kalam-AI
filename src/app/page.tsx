@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Send, Loader2, MessageSquare, Languages, Upload, Settings } from 'lucide-react';
 import WritingStyleUpload from '@/components/WritingStyleUpload';
 import AdvancedFeatures from '@/components/AdvancedFeatures';
+import AcademicPaperSearch from '@/components/AcademicPaperSearch';
 
 export default function Home() {
   const [prompt, setPrompt] = useState('');
@@ -15,6 +16,7 @@ export default function Home() {
   const [useWritingStyle, setUseWritingStyle] = useState(true);
   const [showUploadModal, setShowUploadModal] = useState(false);
   const [generatedImage, setGeneratedImage] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState<'generate' | 'academic' | 'advanced'>('generate');
 
   const generateText = async () => {
     if (!prompt.trim()) {
@@ -150,7 +152,46 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Navigation Tabs */}
+        <div className="flex justify-center mb-8">
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-1 shadow-lg">
+            <div className="flex space-x-1">
+              <button
+                onClick={() => setActiveTab('generate')}
+                className={`px-4 py-2 rounded-md font-medium transition-colors ${
+                  activeTab === 'generate'
+                    ? 'bg-blue-600 text-white'
+                    : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
+                }`}
+              >
+                AI Generator
+              </button>
+              <button
+                onClick={() => setActiveTab('academic')}
+                className={`px-4 py-2 rounded-md font-medium transition-colors ${
+                  activeTab === 'academic'
+                    ? 'bg-blue-600 text-white'
+                    : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
+                }`}
+              >
+                Academic Papers
+              </button>
+              <button
+                onClick={() => setActiveTab('advanced')}
+                className={`px-4 py-2 rounded-md font-medium transition-colors ${
+                  activeTab === 'advanced'
+                    ? 'bg-blue-600 text-white'
+                    : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
+                }`}
+              >
+                Advanced Features
+              </button>
+            </div>
+          </div>
+        </div>
+
         {/* Main Content */}
+        {activeTab === 'generate' && (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Input Section */}
           <div className="space-y-6">
@@ -273,11 +314,21 @@ export default function Home() {
             </div>
           </div>
         </div>
+        )}
 
-        {/* Advanced Features Section */}
-        <div className="mt-8">
-          <AdvancedFeatures onFeatureSelect={handleAdvancedFeature} />
-        </div>
+        {/* Academic Papers Tab */}
+        {activeTab === 'academic' && (
+          <div className="max-w-4xl mx-auto">
+            <AcademicPaperSearch />
+          </div>
+        )}
+
+        {/* Advanced Features Tab */}
+        {activeTab === 'advanced' && (
+          <div className="max-w-4xl mx-auto">
+            <AdvancedFeatures onFeatureSelect={handleAdvancedFeature} />
+          </div>
+        )}
 
         {/* Footer */}
         <div className="mt-12 text-center text-gray-600 dark:text-gray-400">

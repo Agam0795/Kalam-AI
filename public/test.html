@@ -65,7 +65,10 @@
         <p class="subtitle">API Testing Interface</p>
     </div>
     
-    <button onclick="testAPI()">Test AI Generation API</button>
+    <div style="margin-bottom: 20px;">
+        <button onclick="testAPI()">Test AI Generation API</button>
+        <button onclick="testAcademicAPI()" style="margin-left: 10px;">Test Academic Papers API</button>
+    </div>
     <div id="result"></div>
     
     <script>
@@ -90,6 +93,46 @@
                 
                 if (response.ok) {
                     resultDiv.innerHTML = '<strong>Success:</strong> ' + data.response;
+                } else {
+                    resultDiv.innerHTML = '<strong>Error:</strong> ' + data.error;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = '<strong>Network Error:</strong> ' + error.message;
+            }
+        }
+
+        async function testAcademicAPI() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = 'Testing Academic Papers API...';
+            
+            try {
+                const response = await fetch('/api/fetch-papers', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        authorName: 'Geoffrey Hinton',
+                        affiliation: 'University of Toronto'
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    let html = '<strong>Academic Papers API Success!</strong><br><br>';
+                    html += `<strong>Author:</strong> ${data.selectedAuthor.name}<br>`;
+                    html += `<strong>Papers Found:</strong> ${data.totalFound}<br>`;
+                    html += `<strong>Citations:</strong> ${data.selectedAuthor.citationCount}<br><br>`;
+                    
+                    if (data.papers.length > 0) {
+                        html += '<strong>Top 3 Papers:</strong><br>';
+                        data.papers.slice(0, 3).forEach((paper, index) => {
+                            html += `${index + 1}. ${paper.title} (${paper.year}) - ${paper.citationCount} citations<br>`;
+                        });
+                    }
+                    
+                    resultDiv.innerHTML = html;
                 } else {
                     resultDiv.innerHTML = '<strong>Error:</strong> ' + data.error;
                 }

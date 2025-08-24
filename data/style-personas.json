@@ -1,0 +1,67 @@
+{
+  "personas": [
+    {
+      "id": "6897bcc3bd86df0ca476a8ed",
+      "name": "gfhnfdgndfnd",
+      "status": "ready",
+      "sourceCount": 2
+    },
+    {
+      "id": "6897bbc3d6551b7c346df03f",
+      "name": "jkl,ji;jkjk;",
+      "status": "ready",
+      "sourceCount": 3
+    },
+    {
+      "id": "6897bb5b14878d8dff314eeb",
+      "name": "jljhl",
+      "status": "ready",
+      "sourceCount": 4
+    },
+    {
+      "id": "6897baab14878d8dff314ee4",
+      "name": "gsdgsd",
+      "status": "ready",
+      "sourceCount": 1
+    },
+    {
+      "id": "6897b82ba5ec7fa63c72c134",
+      "name": "t gf f",
+      "status": "ready",
+      "sourceCount": 3
+    },
+    {
+      "id": "6897b804a5ec7fa63c72c12d",
+      "name": "gbrgb",
+      "status": "ready",
+      "sourceCount": 1
+    },
+    {
+      "id": "6897b309d6551b7c346df036",
+      "name": "uiluykl",
+      "status": "ready",
+      "sourceCount": 1
+    },
+    {
+      "id": "68905c307aa526e7490b5bdb",
+      "name": "hello",
+      "status": "ready",
+      "sourceCount": 5
+    },
+    {
+      "id": "688bc0b00e8a70f34b453340",
+      "name": "h",
+      "status": "ready",
+      "sourceCount": 1
+    },
+    {
+      "id": "688bb725079f9017fd9c0e10",
+      "name": "nmmn",
+      "status": "ready",
+      "sourceCount": 2
+    }
+  ],
+  "lastUpdated": "2025-08-12T16:14:51.265Z",
+  "version": "2.0.0",
+  "totalPersonas": 10
+}

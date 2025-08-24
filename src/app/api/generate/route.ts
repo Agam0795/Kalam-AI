@@ -1,12 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { GoogleGenerativeAI } from '@google/generative-ai';
-import { prisma } from '@/lib/db';
+import { PrismaClient } from '@prisma/client';
+import { linguisticPersonaEmulator } from '@/lib/advancedStyleAnalyzer';
+
+const prisma = new PrismaClient();
 
 export async function POST(request: NextRequest) {
   try {
     console.log('Generate API called');
-    const { prompt, language, useWritingStyle } = await request.json();
-    console.log('Request data:', { prompt: prompt?.substring(0, 50), language, useWritingStyle });
+  const { prompt, language, useWritingStyle, selectedPersona, personaData } = await request.json();
+  console.log('Request data:', { prompt: prompt?.substring(0, 50), language, useWritingStyle, selectedPersona, personaDataProvided: !!personaData });
 
     if (!prompt) {
       return NextResponse.json(
@@ -27,24 +30,90 @@ export async function POST(request: NextRequest) {
     const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-    let systemPrompt = language 
+  let systemPrompt = language 
       ? `You are a helpful AI assistant. Please respond in ${language}. Generate detailed, informative, and well-structured content based on the user's prompt.`
       : 'You are a helpful AI assistant. Generate detailed, informative, and well-structured content based on the user\'s prompt.';
 
-    // If user wants to use their writing style, fetch examples from database
-    if (useWritingStyle) {
-      const writingStyles = await prisma.writingStyle.findMany({
-        where: language ? { language } : {},
-        orderBy: { createdAt: 'desc' },
-        take: 3, // Get the 3 most recent examples
-      });
+    // Handle style persona selection
+    // If full persona JSON supplied, prefer it over fetching by id
+    if (personaData && personaData.styleProfile) {
+      try {
+        const sp = personaData.styleProfile || {};
+        const lf = personaData.linguisticFingerprint || {};
+        const keywords = Array.isArray(sp.keywords) ? sp.keywords.join(', ') : (Array.isArray(lf.keywords) ? lf.keywords.join(', ') : '');
+        systemPrompt += `\n\nIMPORTANT: Adopt the provided writing persona named "${personaData.name || 'Unknown Persona'}".\n\nSTYLE PROFILE:\nTone: ${sp.tone || lf.tone || 'neutral'}\nSentence Style: ${sp.sentenceStyle || 'balanced'}\nComplexity: ${sp.complexity || lf.sentenceComplexity || 'moderate'}\nFormality: ${sp.formalityLevel || lf.formalityLevel || 'neutral'}\nVocabulary Level: ${sp.vocabularyLevel || lf.vocabularyLevel || 'standard'}\nSource Count: ${personaData.sourceCount || 0}\n\nKEYWORDS / DOMAIN TERMS: ${keywords || 'Use precise domain-relevant terminology as needed.'}\n\nWRITING PATTERNS:${sp.writingPatterns ? '\n- ' + sp.writingPatterns.join('\n- ') : '\n- Maintain logical flow\n- Use evidence-based reasoning'}\n\nSTRUCTURAL PREFERENCES:${sp.structuralPreferences ? '\n- ' + sp.structuralPreferences.join('\n- ') : '\n- Clear introductions and conclusions\n- Coherent paragraph transitions'}\n\nIf linguistic fingerprint details are present, emulate average sentence length, variety, and rhetorical devices implicitly without stating them. Do NOT mention that you are using an AI style profile. Focus on authenticity and clarity while mirroring the persona's characteristics.`;
+      } catch (e) {
+        console.error('Failed applying personaData style profile', e);
+      }
+    } else if (useWritingStyle) {
+      // If user opted to use their own writing style, fetch the latest saved style and shape the prompt
+      try {
+        const latest = await prisma.writingStyle.findFirst({
+          orderBy: { createdAt: 'desc' },
+        });
+        if (latest?.content) {
+          const fp = linguisticPersonaEmulator.createLinguisticFingerprint(latest.content);
+          systemPrompt += `\n\nIMPORTANT: Emulate the user's personal writing style based on this linguistic fingerprint. Do not state that you are emulating a style.\nTone: ${fp.tone}; Formality: ${fp.formalityLevel}; Vocabulary: ${fp.vocabularyRichness}; Avg sentence length: ${fp.avgSentenceLength.toFixed(1)}; Sentence variety: ${fp.sentenceVariety}.\nKey patterns: ${(fp.writingPatterns || []).slice(0,3).join(', ') || 'Varied sentence structure, logical flow'}.\nPreferred transitions: ${(fp.transitionStyle || []).slice(0,5).join(', ')}.\nRhetorical devices: ${(fp.rhetoricalDevices || []).slice(0,3).join(', ')}.\nInformation pacing: ${fp.informationPacing}.`;
+        }
+      } catch (e) {
+        console.log('Could not apply user writing style fallback:', e);
+      }
+    } else if (selectedPersona && selectedPersona !== 'default') {
+      if (selectedPersona === 'human-writer') {
+        // Advanced Human Writer style with comprehensive natural language patterns
+        systemPrompt += `\n\nYou are an AI agent with the persona of a skilled and versatile human writer. Your primary directive is to generate text that is functionally and stylistically indistinguishable from content written by a thoughtful, articulate, and native-speaking human. Your goal is not merely to provide information but to communicate it with an authentic voice, rhythm, and personality.
 
-      if (writingStyles.length > 0) {
-        const styleExamples = writingStyles
-          .map((style: { title: string; content: string }) => `Title: ${style.title}\nContent: ${style.content}`)
-          .join('\n\n---\n\n');
+CORE WRITING INSTRUCTIONS:
 
-        systemPrompt += `\n\nIMPORTANT: Please write in the same style, tone, and manner as shown in these examples from the user's own writing:\n\n${styleExamples}\n\nMimic the writing style, vocabulary choices, sentence structure, and tone from these examples.`;
+1. EMBRACE A PERSONA: Adopt a specific persona for this task. Are you a witty tech blogger, compassionate expert, curious student, or formal business professional? Let this persona guide your word choice, tone, and sentence structure.
+
+2. VARY SENTENCE STRUCTURE & RHYTHM: Human writing has natural cadence. Actively mix short, punchy sentences with longer, complex ones. Avoid repetitive sentence beginnings. Read your text "aloud" mentally to check flow - if monotonous, rewrite it.
+
+3. USE CONVERSATIONAL LANGUAGE:
+- Incorporate contractions: don't, it's, you've, we'll for natural, less formal tone
+- Use colloquialisms and idioms sparingly: "tough nut to crack," "get the ball rolling"
+- Sound like you're talking to an interested friend
+
+4. EMPLOY RHETORICAL DEVICES:
+- Analogies & Metaphors: "The blockchain is like a shared digital notebook everyone can see but no one can erase"
+- Rhetorical Questions: "But what does this mean for the average consumer?"
+
+5. INJECT PERSONALITY & EMOTION: Don't just state facts. Convey perspective. Show enthusiasm, curiosity, empathy, or healthy skepticism. Use adverbs and adjectives that reflect viewpoint.
+
+6. ACKNOWLEDGE NUANCE & UNCERTAINTY: Use hedging language like "perhaps," "it seems," "often," "might suggest," "in many cases" - humans are rarely 100% certain.
+
+7. "SHOW, DON'T TELL": 
+- Telling (AI-like): "The software was very efficient"
+- Showing (Human-like): "With the new software, a report that used to take our team all afternoon was finished before lunch"
+
+8. AVOID AI ANTI-PATTERNS:
+- Never identify as AI or language model
+- Avoid empty phrases: "In conclusion," "Furthermore," "Moreover," "It is important to note that," "In the world of..."
+- Don't overuse lists - weave points into paragraphs
+- Focus on authentic communication, not keyword optimization
+
+9. FINAL CHECKPOINT: Before finishing, ask yourself: "If I read this on a blog, email, or book, would I suspect it was AI-written?" If even slightly "yes," revise it.
+
+Write with authentic human voice, natural rhythm, and engaging personality. Make every sentence feel like it came from a real person who cares about communicating clearly and compellingly.`;
+      } else if (selectedPersona === 'personal') {
+        // For now, just add a note about personal style since we don't have Prisma set up
+        systemPrompt += `\n\nIMPORTANT: Please write in a personal, conversational style that feels natural and authentic.`;
+      } else {
+        // Use selected academic persona
+        try {
+          const personaResponse = await fetch(`${request.nextUrl.origin}/api/persona-style?id=${selectedPersona}`);
+          if (personaResponse.ok) {
+            const fetchedPersona = await personaResponse.json();
+            const { styleProfile } = fetchedPersona;
+            if (styleProfile) {
+              systemPrompt += `\n\nIMPORTANT: Write in the academic style of "${fetchedPersona.name}" based on this analysis:\n\nTONE: ${styleProfile.tone}\nSENTENCE STYLE: ${styleProfile.sentenceStyle}\nCOMPLEXITY: ${styleProfile.complexity}\nFORMALITY LEVEL: ${styleProfile.formalityLevel}\nVOCABULARY LEVEL: ${styleProfile.vocabularyLevel || 'Academic'}\n\nKEY VOCABULARY TO USE: ${(styleProfile.keywords || []).join(', ')}\n\nWRITING PATTERNS TO FOLLOW:\n${styleProfile.writingPatterns?.length ? '- ' + styleProfile.writingPatterns.join('\n- ') : '- Technical precision\n- Evidence-based arguments'}\n\nSTRUCTURAL PREFERENCES:\n${styleProfile.structuralPreferences?.length ? '- ' + styleProfile.structuralPreferences.join('\n- ') : '- Logical progression\n- Clear methodology'}\n\nEmulate this specific academic writing style while maintaining clarity and accuracy.`;
+            }
+          } else {
+            console.log('Failed to fetch persona style, falling back to default');
+          }
+        } catch (error) {
+          console.error('Error fetching persona style:', error);
+        }
       }
     }
 

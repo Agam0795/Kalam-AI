@@ -1,0 +1,1120 @@
+{
+  "metadata": 
+  {
+    "generatedAt": "2025-08-12T16:14:51.254Z",
+    "version": "2.0.0",
+    "totalPersonas": 10,
+    "includesAcademic": true,
+    "description": "Style personas with advanced linguistic fingerprints for AI text generation"
+  },
+  "stylePersonas": [
+    {
+      "id": "6897bcc3bd86df0ca476a8ed",
+      "name": "gfhnfdgndfnd",
+      "type": "custom",
+      "status": "ready",
+      "sourceCount": 2,
+      "createdAt": "2025-08-09T21:25:23.729Z",
+      "updatedAt": "2025-08-09T21:25:32.373Z",
+      "sourcePapers": [
+        {
+          "id": "ee57e4d7a125f4ca8916284a857c3760d7d378d3",
+          "title": "Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture",
+          "authors": [
+            "Mahmoud Assran",
+            "Quentin Duval",
+            "Ishan Misra",
+            "Piotr Bojanowski",
+            "Pascal Vincent",
+            "Michael G. Rabbat",
+            "Yann LeCun",
+            "Nicolas Ballas"
+          ],
+          "year": 2025,
+          "abstract": "This paper demonstrates an approach for learning highly semantic image representations without relying on hand-crafted data-augmentations. We introduce the Image-based Joint-Embedding Predictive Architecture (I-JEPA), a non-generative approach for self-supervised learning from images. The idea behind I-JEPA is simple: from a single context block, predict the representations of various target blocks in the same image. A core design choice to guide I-JEPA towards producing semantic representations is the masking strategy; specifically, it is crucial to (a) sample target blocks with sufficiently large scale (semantic), and to (b) use a sufficiently informative (spatially distributed) context block. Empirically, when combined with Vision Transformers, we find I-JEPA to be highly scalable. For instance, we train a ViT-Huge/14 on ImageNet using 16 A100 GPUs in under 72 hours to achieve strong downstream performance across a wide range of tasks, from linear classification to object counting and depth prediction.",
+          "url": "https://www.semanticscholar.org/paper/ee57e4d7a125f4ca8916284a857c3760d7d378d3",
+          "isOpenAccess": true
+        },
+        {
+          "id": "6bfafb32b423c3f0456a10984814f89046def489",
+          "title": "A Cookbook of Self-Supervised Learning",
+          "authors": [
+            "Randall Balestriero",
+            "Mark Ibrahim",
+            "Vlad Sobal",
+            "Ari S. Morcos",
+            "Shashank Shekhar",
+            "T. Goldstein",
+            "Florian Bordes",
+            "Adrien Bardes",
+            "G. Mialon",
+            "Yuandong Tian",
+            "Avi Schwarzschild",
+            "A. Wilson",
+            "Jonas Geiping",
+            "Q. Garrido",
+            "Pierre Fernandez",
+            "Amir Bar",
+            "H. Pirsiavash",
+            "Yann LeCun",
+            "Micah Goldblum"
+          ],
+          "year": 2025,
+          "abstract": "Self-supervised learning, dubbed the dark matter of intelligence, is a promising path to advance machine learning. Yet, much like cooking, training SSL methods is a delicate art with a high barrier to entry. While many components are familiar, successfully training a SSL method involves a dizzying set of choices from the pretext tasks to training hyper-parameters. Our goal is to lower the barrier to entry into SSL research by laying the foundations and latest SSL recipes in the style of a cookbook. We hope to empower the curious researcher to navigate the terrain of methods, understand the role of the various knobs, and gain the know-how required to explore how delicious SSL can be.",
+          "url": "https://www.semanticscholar.org/paper/6bfafb32b423c3f0456a10984814f89046def489",
+          "isOpenAccess": true
+        }
+      ],
+      "styleProfile": {
+        "tone": "Objective, confident, and precise, with the option for a more engaging and accessible tone depending on the target audience.",
+        "keywords": [
+          "self-supervised learning",
+          "representation learning",
+          "pretext tasks",
+          "data augmentation",
+          "downstream performance",
+          "semantic",
+          "generative",
+          "hyperparameters",
+          "scalability",
+          "model architecture"
+        ],
+        "sentenceStyle": "Varied sentence lengths and structures, ranging from simple declarative sentences for clarity to more complex sentences for conveying nuanced information; prioritizes clarity and precision.",
+        "complexity": "moderate",
+        "formalityLevel": "professional",
+        "writingPatterns": [
+          "Clear problem statement",
+          "Detailed explanation of methodology",
+          "Presentation of empirical evidence and results",
+          "Concise conclusion summarizing contributions and impact",
+          "Deductive or inductive reasoning depending on the overall goal",
+          "Use of strong verbs and precise nouns"
+        ],
+        "vocabularyLevel": "Sophisticated technical terminology is used appropriately, balanced with simpler language for broader accessibility when needed.  Jargon is minimized, and technical terms are clearly defined or implied by context where necessary.",
+        "structuralPreferences": [
+          "Clear and logical paragraph structure",
+          "Effective use of headings and subheadings (in longer papers)",
+          "Precise use of parentheses, semicolons, and other punctuation to enhance clarity and conciseness",
+          "Figurative language and analogies may be employed judiciously to enhance engagement for a broader audience. "
+        ]
+      },
+      "linguisticFingerprint": null,
+      "originalTexts": [],
+      "paperAnalyses": [
+        {
+          "paperId": "ee57e4d7a125f4ca8916284a857c3760d7d378d3",
+          "analysis": "This abstract exhibits a concise, clear, and highly formal academic writing style characteristic of top-tier computer science publications. Let's analyze it based on your criteria:\n\n1. **Tone and Formality Level:** The tone is objective, confident, and highly formal.  There's no room for subjective opinions or casual language. The authors present their findings as demonstrable facts, using phrases like \"we demonstrate,\" \"we introduce,\" and \"we find.\" The overall effect is one of authority and expertise.\n\n2. **Sentence Structure and Complexity:** The sentences are generally well-structured and grammatically complex, employing a mix of simple, compound, and complex sentences.  This adds to the formality and allows for efficient conveyance of information.  However, the complexity isn't overly convoluted; readability remains high. Notice the effective use of parentheses and semicolons to present nuanced information within the sentence structure.\n\n3. **Vocabulary Sophistication:** The vocabulary is sophisticated but not unnecessarily obscure.  Terms like \"semantic,\" \"generative,\" \"self-supervised learning,\" \"Vision Transformers,\" and \"data-augmentations\" are precise and clearly relevant to the field.  The authors avoid jargon where simpler alternatives would suffice.\n\n4. **Technical Terminology Usage:** The abstract appropriately uses specialized technical terms relevant to computer vision and machine learning. These terms are seamlessly integrated into the text and assumed to be understood by the target audience (fellow researchers in the field). The explanation of the core concept is simplified without sacrificing technical accuracy.\n\n5. **Argumentation Patterns:** The argument follows a clear and logical structure.  It begins by stating the main contribution (\"learning highly semantic image representations without…\"), introduces the method (I-JEPA), explains the key design choices and their rationale (masking strategy), presents empirical evidence (\"we find I-JEPA to be highly scalable\"), and concludes with a quantifiable result (\"achieving strong downstream performance\"). This is a deductive approach, moving from general claims to specific evidence.\n\n6. **Overall Writing Characteristics:** The writing is concise and efficient.  Every word serves a purpose; there's no unnecessary fluff. The abstract successfully conveys the core idea, methodology, results, and significance of the research in a limited space.  The emphasis is on clarity, precision, and impact.\n\n\n**To emulate this writing style:**\n\n* **Prioritize clarity and precision:** Every sentence should have a clear purpose and convey information accurately and concisely. Avoid ambiguity and vagueness.\n* **Use precise technical terminology:** Employ the correct terminology for your field, ensuring it is appropriately defined if necessary.\n* **Maintain a formal and objective tone:** Avoid personal opinions, casual language, and colloquialisms. Use passive voice when appropriate to emphasize the findings rather than the researchers.\n* **Employ a mix of sentence structures:** Vary sentence length and complexity to maintain reader engagement while retaining formality. Use complex sentences strategically to convey multiple related ideas efficiently.\n* **Structure arguments logically:** Employ deductive or inductive reasoning to present your findings in a clear, persuasive manner. State your claims, provide supporting evidence, and draw clear conclusions.\n* **Strive for conciseness:** Every word should contribute to the overall message. Avoid redundancy and unnecessary details.  Focus on conveying the most important information effectively.\n* **Use strong verbs and precise nouns:** Choose words that accurately and powerfully convey your meaning.\n* **Read widely in your field:**  Familiarize yourself with the writing style of leading journals and conferences in your area to internalize best practices.\n\n\nBy following these guidelines, you can significantly improve the clarity, precision, and impact of your own academic writing and emulate the effective style demonstrated in this abstract.\n"
+        },
+        {
+          "paperId": "6bfafb32b423c3f0456a10984814f89046def489",
+          "analysis": "This abstract employs a highly engaging and accessible style, contrasting sharply with the typical dryness often found in academic papers. Let's break down its stylistic characteristics:\n\n**1. Tone and Formality Level:**\n\nThe tone is informal, playful, and even humorous.  Phrases like \"dubbed the dark matter of intelligence,\" \"delicate art with a high barrier to entry,\" \"dizzying set of choices,\" and \"how delicious SSL can be\" inject personality and reduce the distance between the authors and the reader.  While informal, it maintains a level of professionalism; the humor serves to engage, not to detract from the scientific message.  The overall formality is significantly lower than a typical academic abstract.\n\n**2. Sentence Structure and Complexity:**\n\nThe sentences are relatively short and straightforward, prioritizing clarity and readability. While some sentences exhibit more complexity (e.g., the second sentence), they avoid overly convoluted structures. The writing aims for accessibility rather than showcasing complex grammatical constructions.  The use of simple declarative sentences helps maintain the conversational tone.\n\n**3. Vocabulary Sophistication:**\n\nThe vocabulary is a blend of sophisticated technical terms (self-supervised learning, pretext tasks, hyper-parameters) and simpler, more accessible words. The authors deliberately choose words that resonate with a broader audience, avoiding overly specialized jargon where possible.  The use of the metaphor of a \"cookbook\" itself is a deliberate choice to make the subject more relatable.\n\n**4. Technical Terminology Usage:**\n\nTechnical terms are present and necessary, but they're introduced and used judiciously.  The abstract doesn't assume a high level of pre-existing knowledge in self-supervised learning.  The terms are integrated seamlessly into the otherwise informal language.\n\n**5. Argumentation Patterns:**\n\nThe argumentation is straightforward. The abstract clearly states the problem (high barrier to entry in SSL research), proposes a solution (a cookbook-style resource), and briefly outlines the intended outcome (empowering researchers). The argument is implicit rather than explicitly laid out with formal logical steps, reflecting the informal tone.\n\n**6. Overall Writing Characteristics:**\n\nThe overall characteristics are:  **accessible, engaging, informal, and metaphorical.** The authors use analogy (comparing SSL training to cooking) and evocative language to make a complex topic more understandable and appealing to a wider readership. This contrasts with the typical academic style, which prioritizes conciseness and precision above all else.  This approach is likely intended to broaden the appeal of their work beyond the usual niche of experts in the field.\n\n\n**Emulating the Author's Style:**\n\nTo emulate this style, one should:\n\n* **Prioritize clarity and readability:** Use shorter sentences and simpler language where possible.\n* **Employ engaging metaphors and analogies:**  Relate complex concepts to familiar experiences.\n* **Inject personality and humor (judiciously):**  Don't be afraid to use informal language and even a touch of humor, but always maintain professionalism.\n* **Balance technical terms with accessible language:**  Define or explain any specialized terminology to ensure broader understanding.\n* **Focus on a clear and concise argument:**  State the problem, solution, and outcome in a straightforward manner.\n* **Adopt a conversational tone:**  Write as if you're explaining the topic to a colleague, rather than delivering a formal lecture.\n\nHowever, it's crucial to remember that this style is suitable for certain contexts (e.g., an introductory abstract aimed at a broad audience).  It might be inappropriate for other parts of the paper or for other types of academic writing where strict formality is expected.\n"
+        }
+      ],
+      "isPublic": false,
+      "userId": null,
+      "errorMessage": null
+    },
+    {
+      "id": "6897bbc3d6551b7c346df03f",
+      "name": "jkl,ji;jkjk;",
+      "type": "custom",
+      "status": "ready",
+      "sourceCount": 3,
+      "createdAt": "2025-08-09T21:21:07.133Z",
+      "updatedAt": "2025-08-09T21:21:16.422Z",
+      "sourcePapers": [
+        {
+          "id": "b3a6dc4271dcb6b5f9c37933b3c8db4c1cc3e215",
+          "title": "Failure to thrive - an overlooked manifestation of KMT2B-related dystonia: a case presentation",
+          "authors": [
+            "A. Ng",
+            "S. Galosi",
+            "Lisa Salz",
+            "Terence Wong",
+            "Caitlin R. Schwager",
+            "S. Amudhavalli",
+            "Rose Gelineau-Morel",
+            "S. Chowdhury",
+            "J. Friedman"
+          ],
+          "year": 2025,
+          "abstract": "KMT2B-related dystonia is a recently described form of childhood onset dystonia that may improve with deep brain stimulation. Prior reports have focused on neurologic features including prominent bulbar involvement without detailing general health consequences that may result from orolingual dysfunction. We describe a family with novel KMT2B mutation with several members with failure to thrive to highlight this non-neurologic, but consequential impact of mutation in this gene. We present a case of a 15-year old female who was admitted and evaluated for failure to thrive. On exam, she had severe speech dysfluency, limited ability to protrude the tongue, and generalized dystonia involving the oromandibular region, right upper and left lower extremity with left foot inversion contracture. The proband and her parents underwent whole genome sequencing. A previously undescribed variant, c.4960 T > C (p.Cys1654Arg), was identified in the KMT2B gene in the proband and mother, and this variant was subsequently confirmed in two maternal cousins, one with failure to thrive. Literature review identified frequent reports of prominent bulbar involvement but failure to thrive is rarely mentioned. Failure to thrive is a common pediatric clinical condition that has consequences for growth and development. In the presence of an abnormal neurologic exam, a search for a specific underlying genetic etiology should be pursued. With this case series, we highlight an unusual potentially treatable cause of failure to thrive, reinforce the importance of precise molecular diagnosis for patients with failure to thrive and an abnormal neurologic exam, and underscore the importance of cascade screening of family members.",
+          "url": "https://www.semanticscholar.org/paper/b3a6dc4271dcb6b5f9c37933b3c8db4c1cc3e215",
+          "isOpenAccess": true
+        },
+        {
+          "id": "d175a5524eea532421a066a696dd3518ce110432",
+          "title": "Atypical presentation of plantar fasciitis secondary to soft-tissue mass infiltration.",
+          "authors": [
+            "A. Ng",
+            "T. Beegle",
+            "A. Rockett"
+          ],
+          "year": 2025,
+          "abstract": "This article describes a patient with plantar fascial pain who presented to the office of one of the authors. Physical examination and the patient's description of the history of symptoms revealed classic signs and symptoms of plantar fasciitis. The patient was treated with numerous conservative modalities, including ultrasound, nonsteroidal anti-inflammatory medications, trigger-point injections, over-the-counter orthoses, and stretching exercises. When the pain was not relieved by these conservative measures, magnetic resonance imaging of the area was performed. Visualization of the insertional area of the plantar fascia revealed a mass inferior to, as well as infiltrated into, the plantar fascia. Surgical excision of the lesion resulted in complete elimination of the patient's pain.",
+          "url": "https://www.semanticscholar.org/paper/d175a5524eea532421a066a696dd3518ce110432",
+          "isOpenAccess": false
+        },
+        {
+          "id": "adf1898e45a25fa10b1db06cce8ff0767602f7a7",
+          "title": "Giant hepatic haemangioma rupture in a patient on direct oral anticoagulant therapy",
+          "authors": [
+            "M. Nguyen",
+            "A. Lim",
+            "E. Jeyarajan",
+            "M. Koh",
+            "A. Ng",
+            "Phillip Townend"
+          ],
+          "year": 2025,
+          "abstract": "Abstract Rupture of a liver haemangioma is extremely rare, with less than 100 cases reported in the literature. This is the first case known to date reporting a rupture occurring with direct oral anticoagulant therapy. A 76-year-old woman presented with acute abdominal pain and syncope in the context of commencing apixaban 4 weeks prior. Abdominal computed tomography and angiography demonstrated a large heterogenous mass in the left liver lobe with contrast blush suggestive of a bleeding tumour. Urgent transcatheter arterial embolization successfully ceased haemorrhage. Due to persistent compressive symptoms, a left lateral hepatectomy was performed. CD34 immunostaining of the tissue revealed variably sized vessels, which was consistent with a ruptured giant hepatic haemangioma. Our case substantiates the limited available literature regarding ruptured haemangiomas. Combined with previous case reports, this report will significantly contribute to our understanding of the risk factors, diagnosis and surgical indications for ruptured hepatic haemangiomas.",
+          "url": "https://www.semanticscholar.org/paper/adf1898e45a25fa10b1db06cce8ff0767602f7a7",
+          "isOpenAccess": true
+        }
+      ],
+      "styleProfile": {
+        "tone": "Formal, objective, and factual; avoids subjective opinions, emotional language, and speculation.",
+        "keywords": [
+          "patient",
+          "presentation",
+          "diagnosis",
+          "treatment",
+          "outcome",
+          "imaging",
+          "genetic",
+          "mutation",
+          "therapy",
+          "clinical",
+          "findings",
+          "case report",
+          "method",
+          "results",
+          "conclusion"
+        ],
+        "sentenceStyle": "Predominantly short to medium length declarative sentences; complex sentences are well-structured and easy to follow;  passive voice frequently used to maintain objectivity.",
+        "complexity": "moderate",
+        "formalityLevel": "academic",
+        "writingPatterns": [
+          "Problem/Case Presentation/Literature Review/Conclusion (deductive); Chronological narrative (inductive); Clear argumentative structure (problem, method, results, conclusion)"
+        ],
+        "vocabularyLevel": "Sophisticated medical terminology used precisely and appropriately; avoids overly obscure jargon; ensures accessibility to a broader medical readership; technical terms are used accurately and effectively.",
+        "structuralPreferences": [
+          "Concise and efficient; every sentence contributes to the overall message; logically structured, following a typical case report or case presentation abstract format (e.g., background, case presentation, intervention, outcome, significance);  prioritizes clarity and conciseness; focuses on impactful findings."
+        ]
+      },
+      "linguisticFingerprint": null,
+      "originalTexts": [],
+      "paperAnalyses": [
+        {
+          "paperId": "b3a6dc4271dcb6b5f9c37933b3c8db4c1cc3e215",
+          "analysis": "This abstract exhibits a clear and concise academic writing style, typical of a case presentation in a medical journal. Let's analyze it based on your criteria:\n\n**1. Tone and Formality Level:** The tone is formal, objective, and factual.  There's no emotional language or subjective opinions. The language is precise and avoids ambiguity. The overall impression is one of scientific reporting.\n\n**2. Sentence Structure and Complexity:** The sentences are generally short to medium length, enhancing readability.  While some sentences are complex (e.g., the sentence describing the patient's examination findings), they are well-structured and easy to follow.  The authors avoid overly long or convoluted sentences.\n\n**3. Vocabulary Sophistication:** The vocabulary is sophisticated, appropriate for a medical audience.  Terms like \"dystonia,\" \"bulbar involvement,\" \"orolingual dysfunction,\" \"whole genome sequencing,\" \"variant,\" and \"cascade screening\" are used accurately and effectively. However, the authors avoid overly obscure jargon, ensuring accessibility to a broader medical readership.\n\n**4. Technical Terminology Usage:** The abstract makes extensive use of precise technical terminology specific to genetics, neurology, and pediatrics. The terms are used correctly and their meaning is clear within the context.  Abbreviations are used sparingly and usually explained (or easily inferable from the context).\n\n**5. Argumentation Patterns:** The abstract follows a clear argumentative structure:\n\n* **Problem:** KMT2B-related dystonia has been described, but its broader impact, especially failure to thrive, is underreported.\n* **Case Presentation:** A case of a 15-year-old with KMT2B-related dystonia and failure to thrive is presented.  Genetic testing confirms a novel mutation.\n* **Literature Review:** The authors note the lack of emphasis on failure to thrive in existing literature.\n* **Conclusion/Implications:** The case highlights the importance of considering KMT2B-related dystonia as a potential cause of failure to thrive, emphasizing the need for genetic testing and family screening.\n\nThis is a deductive approach, moving from a general observation (underreporting of FTT in KMT2B dystonia) to a specific case and back to a broader implication.\n\n**6. Overall Writing Characteristics:** The writing is concise, efficient, and highly focused. Every sentence contributes directly to the overall message.  The abstract is well-organized and logically structured, clearly conveying the key findings and their significance.  It adheres to the standard format for a medical case presentation abstract.\n\n\n**Emulating the Author's Style:**\n\nTo emulate this style, consider the following:\n\n* **Prioritize clarity and conciseness:** Every word should serve a purpose. Avoid unnecessary adjectives or adverbs.\n* **Use precise and accurate technical terminology:** Employ the correct medical terminology relevant to your field. Define any less common terms or abbreviations.\n* **Maintain an objective and formal tone:** Avoid subjective opinions or emotional language.\n* **Structure your writing logically:** Employ a clear argumentative structure (problem, method, results, conclusion).\n* **Use short to medium-length sentences:**  Enhance readability by avoiding overly complex sentences.\n* **Focus on impactful findings:** Highlight the most significant results and their implications.\n* **Proofread meticulously:** Ensure accuracy in grammar, spelling, and punctuation.\n\n\nBy following these guidelines, you can craft academic writing that is clear, concise, and impactful, mirroring the style of this medical abstract.\n"
+        },
+        {
+          "paperId": "d175a5524eea532421a066a696dd3518ce110432",
+          "analysis": "This abstract exhibits a clear, concise, and clinically focused writing style common in medical case reports. Let's analyze its characteristics:\n\n1. **Tone and Formality Level:** The tone is highly formal, objective, and factual.  There's no subjective opinion or speculation; the language focuses solely on reporting the case's details and findings.  The passive voice (\"The patient was treated...\") is frequently used, maintaining this objective stance.\n\n2. **Sentence Structure and Complexity:** The sentences are predominantly short and declarative, prioritizing clarity and directness.  There's minimal use of complex sentence structures with multiple clauses.  This contributes to the abstract's readability and ease of comprehension for a medical audience.\n\n3. **Vocabulary Sophistication:** The vocabulary is sophisticated but not overly technical for a general medical audience. Terms like \"conservative modalities,\" \"insertional area,\" and \"surgical excision\" are used, reflecting the medical context, but the language remains accessible.  Avoidance of jargon not familiar to clinicians is a key feature.\n\n4. **Technical Terminology Usage:**  Medical terminology is employed precisely and appropriately.  Terms like \"plantar fasciitis,\" \"nonsteroidal anti-inflammatory medications,\" \"magnetic resonance imaging,\" and \"trigger-point injections\" are used without explanation, assuming the reader possesses the necessary medical background.  This judicious use of terminology avoids over-technicality.\n\n5. **Argumentation Patterns:**  The abstract follows a straightforward chronological narrative.  It presents the problem (plantar fascial pain), the diagnostic process (physical examination, imaging), the treatment (conservative measures, surgery), and the outcome (pain resolution).  It's essentially a concise case report summarizing a linear progression of events. The implicit argument is that atypical presentations of plantar fasciitis warrant further investigation, potentially via MRI.\n\n6. **Overall Writing Characteristics:** The writing is characterized by brevity, clarity, precision, and objectivity.  The focus is on conveying essential information efficiently and accurately.  Redundancy is avoided.  The style is suitable for its intended purpose: quickly informing the reader about the salient features of a clinical case.\n\n\n**Emulating this Author's Style:** To emulate this style, one should focus on these key elements:\n\n* **Prioritize Clarity and Conciseness:**  Use short, declarative sentences. Avoid overly complex sentence structures.  Get straight to the point.\n* **Maintain Objectivity:** Employ the passive voice frequently. Avoid subjective opinions or interpretations.  Stick to factual reporting.\n* **Use Precise Medical Terminology:**  Use accurate and appropriate medical terms. However, avoid jargon unless your audience is highly specialized. Define any uncommon terms.\n* **Adopt a Chronological Narrative:** Structure your writing to present information in a clear, logical sequence of events.\n* **Focus on Essential Information:**  Be selective about the information included. Omit unnecessary details.  Prioritize conciseness above all.\n* **Proofread Carefully:**  Ensure accuracy and grammatical correctness. Medical writing demands precision.\n\nBy following these guidelines, you can produce medical writing that is clear, concise, and effective—mirroring the style of the provided abstract.\n"
+        },
+        {
+          "paperId": "adf1898e45a25fa10b1db06cce8ff0767602f7a7",
+          "analysis": "This abstract demonstrates a concise, objective, and highly formal academic writing style typical of medical case reports.  Let's break down its characteristics:\n\n1. **Tone and Formality Level:** The tone is extremely formal, objective, and devoid of any subjective opinions or speculation.  It uses passive voice extensively (\"This is the first case known…,\" \"Abdominal computed tomography… demonstrated…,\" \"a left lateral hepatectomy was performed\") to maintain objectivity and distance from the events described.  The language is precise and avoids colloquialisms or informal expressions.\n\n2. **Sentence Structure and Complexity:** The sentences are generally short to medium length, contributing to clarity and readability.  While some sentences are more complex (e.g., the sentence describing the patient's presentation), they are grammatically sound and easily understood within the context.  The structure is predominantly declarative, directly reporting facts and findings.\n\n3. **Vocabulary Sophistication:** The vocabulary is sophisticated, employing precise medical terminology (see point 4).  However, the language remains accessible to a medical audience without being overly obscure.  Words like \"heterogeneous,\" \"syncope,\" \"embolization,\" and \"hepatectomy\" demonstrate the high level of vocabulary, yet the sentences remain understandable within the medical context.\n\n4. **Technical Terminology Usage:**  The abstract is rich in technical medical terminology: \"hepatic haemangioma,\" \"direct oral anticoagulant therapy,\" \"apixaban,\" \"computed tomography,\" \"angiography,\" \"contrast blush,\" \"transcatheter arterial embolization,\" \"hepatectomy,\" \"CD34 immunostaining.\"  This precise terminology is essential for accuracy and efficient communication within the medical field.  Abbreviations are used sparingly but appropriately (e.g., CT could have been used instead of computed tomography, but it wasn't).\n\n5. **Argumentation Patterns:** The argumentation is primarily inductive, presenting a case study to support the broader claim that giant hepatic haemangioma rupture is rare and that this case contributes to the limited understanding of this condition, especially in relation to anticoagulant therapy.  The abstract concludes by summarizing the significance of the case for the field.  It doesn't explicitly argue for any specific intervention beyond what was conducted.\n\n6. **Overall Writing Characteristics:**  The writing is concise, factual, and highly focused.  It prioritizes clear and efficient communication of essential information.  There's minimal background information provided; the focus is squarely on the case presentation, findings, and significance. The style is highly structured, following a typical case report abstract format (background, case presentation, intervention, outcome, significance).\n\n**To emulate this author's style:**\n\n* **Prioritize objectivity:** Use passive voice, avoid subjective interpretations, and focus solely on factual reporting.\n* **Employ precise medical terminology:**  Use accurate and specific medical terms to ensure clarity and avoid ambiguity.\n* **Maintain brevity and conciseness:** Keep sentences relatively short and avoid unnecessary words or phrases.\n* **Structure writing logically:** Follow a clear, structured format (e.g., for case reports: background, case description, methods, results, conclusion).\n* **Focus on factual reporting:**  Present the information directly and objectively, without embellishment.\n* **Use strong verbs:**  Choose active verbs when possible (in cases where objectivity doesn't demand passive voice), but ensure they remain formal and precise.\n\n\nBy adhering to these guidelines, one can effectively mimic the clear, concise, and highly formal style demonstrated in this medical case report abstract.\n"
+        }
+      ],
+      "isPublic": false,
+      "userId": null,
+      "errorMessage": null
+    },
+    {
+      "id": "6897bb5b14878d8dff314eeb",
+      "name": "jljhl",
+      "type": "custom",
+      "status": "ready",
+      "sourceCount": 4,
+      "createdAt": "2025-08-09T21:19:23.204Z",
+      "updatedAt": "2025-08-09T21:19:33.864Z",
+      "sourcePapers": [
+        {
+          "id": "053b1a32320d002b7b77faa4f967721b7c7c141c",
+          "title": "Unusual high-grade and low-grade glioma in an infant with PPP1CB-ALK gene fusion",
+          "authors": [
+            "A. Ng",
+            "M. Levy",
+            "D. Malicki",
+            "J. Crawford"
+          ],
+          "year": 2025,
+          "abstract": "A previously healthy 3-month-old former 30-week premature girl presented with sudden onset altered mental status and cardiopulmonary arrest.[1][1] CT scan showed a 10.2 cm hyperdense lesion in the right hemisphere with areas of acute haemorrhage causing subfalcine, uncal and inferior cerebellar",
+          "url": "https://www.semanticscholar.org/paper/053b1a32320d002b7b77faa4f967721b7c7c141c",
+          "isOpenAccess": true
+        },
+        {
+          "id": "b3a6dc4271dcb6b5f9c37933b3c8db4c1cc3e215",
+          "title": "Failure to thrive - an overlooked manifestation of KMT2B-related dystonia: a case presentation",
+          "authors": [
+            "A. Ng",
+            "S. Galosi",
+            "Lisa Salz",
+            "Terence Wong",
+            "Caitlin R. Schwager",
+            "S. Amudhavalli",
+            "Rose Gelineau-Morel",
+            "S. Chowdhury",
+            "J. Friedman"
+          ],
+          "year": 2025,
+          "abstract": "KMT2B-related dystonia is a recently described form of childhood onset dystonia that may improve with deep brain stimulation. Prior reports have focused on neurologic features including prominent bulbar involvement without detailing general health consequences that may result from orolingual dysfunction. We describe a family with novel KMT2B mutation with several members with failure to thrive to highlight this non-neurologic, but consequential impact of mutation in this gene. We present a case of a 15-year old female who was admitted and evaluated for failure to thrive. On exam, she had severe speech dysfluency, limited ability to protrude the tongue, and generalized dystonia involving the oromandibular region, right upper and left lower extremity with left foot inversion contracture. The proband and her parents underwent whole genome sequencing. A previously undescribed variant, c.4960 T > C (p.Cys1654Arg), was identified in the KMT2B gene in the proband and mother, and this variant was subsequently confirmed in two maternal cousins, one with failure to thrive. Literature review identified frequent reports of prominent bulbar involvement but failure to thrive is rarely mentioned. Failure to thrive is a common pediatric clinical condition that has consequences for growth and development. In the presence of an abnormal neurologic exam, a search for a specific underlying genetic etiology should be pursued. With this case series, we highlight an unusual potentially treatable cause of failure to thrive, reinforce the importance of precise molecular diagnosis for patients with failure to thrive and an abnormal neurologic exam, and underscore the importance of cascade screening of family members.",
+          "url": "https://www.semanticscholar.org/paper/b3a6dc4271dcb6b5f9c37933b3c8db4c1cc3e215",
+          "isOpenAccess": true
+        },
+        {
+          "id": "d175a5524eea532421a066a696dd3518ce110432",
+          "title": "Atypical presentation of plantar fasciitis secondary to soft-tissue mass infiltration.",
+          "authors": [
+            "A. Ng",
+            "T. Beegle",
+            "A. Rockett"
+          ],
+          "year": 2025,
+          "abstract": "This article describes a patient with plantar fascial pain who presented to the office of one of the authors. Physical examination and the patient's description of the history of symptoms revealed classic signs and symptoms of plantar fasciitis. The patient was treated with numerous conservative modalities, including ultrasound, nonsteroidal anti-inflammatory medications, trigger-point injections, over-the-counter orthoses, and stretching exercises. When the pain was not relieved by these conservative measures, magnetic resonance imaging of the area was performed. Visualization of the insertional area of the plantar fascia revealed a mass inferior to, as well as infiltrated into, the plantar fascia. Surgical excision of the lesion resulted in complete elimination of the patient's pain.",
+          "url": "https://www.semanticscholar.org/paper/d175a5524eea532421a066a696dd3518ce110432",
+          "isOpenAccess": false
+        },
+        {
+          "id": "9c83fc259066a76a1de77ce380e21fac2f379015",
+          "title": "Penile Ultrasound",
+          "authors": [
+            "A. Ng",
+            "G. Richards",
+            "B. Gilbert"
+          ],
+          "year": 2025,
+          "abstract": "No abstract available",
+          "url": "https://www.semanticscholar.org/paper/9c83fc259066a76a1de77ce380e21fac2f379015",
+          "isOpenAccess": false
+        }
+      ],
+      "styleProfile": {
+        "tone": "Formal, objective, concise, and impersonal.  Avoids subjective opinions, speculation, and colloquialisms.",
+        "keywords": [
+          "dystonia",
+          "glioma",
+          "plantar fasciitis",
+          "magnetic resonance imaging",
+          "genetic fusion",
+          "whole genome sequencing",
+          "failure to thrive",
+          "surgical excision",
+          "nonsteroidal anti-inflammatory medications",
+          "cardiopulmonary arrest",
+          "haemorrhage",
+          "subfalcine",
+          "uncal",
+          "inferior cerebellar",
+          "variant",
+          "B-mode",
+          "Doppler"
+        ],
+        "sentenceStyle": "Primarily simple and compound sentences; some complex sentences used for efficiency in conveying detailed clinical information.  Prioritizes clarity and directness.  Mix of short and longer sentences to vary rhythm while maintaining clarity.",
+        "complexity": "moderate",
+        "formalityLevel": "academic",
+        "writingPatterns": [
+          "Chronological presentation of clinical findings (problem-solution or case history)",
+          "Precise description of symptoms and diagnostic procedures",
+          "Concise summary of key findings and clinical significance",
+          "Emphasis on factual reporting over interpretation or argumentation",
+          "Use of technical terminology where appropriate, but balanced with general medical understanding of the intended audience"
+        ],
+        "vocabularyLevel": "Sophisticated medical terminology used accurately and precisely. Avoids unnecessary jargon and aims for clarity within a specialist medical audience.  Terms are often defined implicitly through context.",
+        "structuralPreferences": [
+          "IMRaD structure (Introduction, Methods, Results, Discussion) or similar logical flow adapted to case reports (problem, diagnosis, treatment, outcome)",
+          "Use of active voice where appropriate for clarity and conciseness",
+          "Systematic presentation of information, often chronological",
+          "Concise and efficient use of language, maximizing information density while maintaining clarity."
+        ]
+      },
+      "linguisticFingerprint": null,
+      "originalTexts": [],
+      "paperAnalyses": [
+        {
+          "paperId": "053b1a32320d002b7b77faa4f967721b7c7c141c",
+          "analysis": "This abstract, while brief, exhibits characteristics typical of a medical case report abstract. Let's analyze its style:\n\n**1. Tone and Formality Level:** The tone is highly formal, objective, and concise.  There's no room for subjective opinions or speculation. The language is purely factual and clinical, reporting observations without interpretation or embellishment.\n\n**2. Sentence Structure and Complexity:** The sentences are relatively short and declarative, prioritizing clarity and directness over elaborate constructions.  The first sentence introduces the patient's condition, while subsequent sentences present key findings in a straightforward manner.  The complexity is low to moderate, focusing on conveying information efficiently.  Note the use of a participial phrase (\"A previously healthy 3-month-old former 30-week premature girl presented...\") to compress information.\n\n\n**3. Vocabulary Sophistication:** The vocabulary is precise and technical, appropriate for a medical audience. While not overly complex, it employs specific medical terms (\"altered mental status,\" \"cardiopulmonary arrest,\" \"hyperdense lesion,\" \"haemorrhage,\" \"subfalcine,\" \"uncal,\" \"inferior cerebellar\").  However, the terms are used accurately and without unnecessary jargon.\n\n**4. Technical Terminology Usage:** The abstract makes extensive use of technical medical terminology, reflecting the nature of the case report.  The terms are essential for describing the patient's condition and findings accurately.  There's a balance – it uses jargon where necessary but avoids overly specialized language that would be inaccessible to a broader medical audience.\n\n**5. Argumentation Patterns:** This is a case report, not a full research article.  There is no explicit argument being made. The pattern is descriptive and purely observational. The abstract simply presents the key features of a rare case: the patient's demographics, presenting symptoms, and significant radiological findings.  The implicit argument is the rarity and interest of the case itself, highlighting the unusual combination of glioma type and genetic fusion.\n\n**6. Overall Writing Characteristics:** The writing is highly structured and organized, presenting information systematically. The emphasis is on brevity, accuracy, and clarity.  There's a focus on conveying essential clinical information efficiently.  The style prioritizes factual reporting over interpretive analysis, reflecting the typical structure of a medical case report abstract.\n\n\n**Emulating the Author's Style:** To emulate this style:\n\n* **Prioritize clarity and conciseness:** Use short, declarative sentences. Avoid unnecessary words or complex sentence structures.\n* **Employ precise medical terminology:** Use accurate and specific terms to describe clinical findings. Ensure the terminology is appropriate for your intended audience.\n* **Maintain a formal and objective tone:** Avoid subjective opinions or interpretations. Focus on factual reporting.\n* **Structure your writing logically:** Organize information systematically and chronologically, ensuring a clear and coherent flow.\n* **Use active voice where possible:** This will enhance clarity and directness.\n* **Focus on factual reporting:**  In a case report abstract, the primary goal is to present the essential findings concisely and accurately, not to argue a particular point.\n\n\nIn summary, the abstract showcases a highly specialized style appropriate for its genre.  By emulating its focus on precision, brevity, and objective reporting, one can achieve a similarly effective style in medical writing.  The key is to use technical language judiciously and maintain a crystal-clear presentation of clinical data.\n"
+        },
+        {
+          "paperId": "b3a6dc4271dcb6b5f9c37933b3c8db4c1cc3e215",
+          "analysis": "This abstract exhibits a concise, formal, and informative writing style typical of a medical case report. Let's break down its characteristics:\n\n**1. Tone and Formality Level:**\n\nThe tone is highly formal and objective, characteristic of academic medical writing.  There's no subjective opinion or speculation; the language is precise and factual. The use of \"we\" is appropriate for presenting the authors' research and findings.\n\n**2. Sentence Structure and Complexity:**\n\nSentence structure is a mix of simple and complex sentences.  Many sentences are relatively short and direct, prioritizing clarity.  However, some longer, more complex sentences, often containing multiple clauses, are used to convey detailed clinical information efficiently.  For example, the sentence describing the patient's exam findings is complex but structured logically to present multiple symptoms concisely.\n\n**3. Vocabulary Sophistication:**\n\nThe vocabulary is sophisticated, using precise medical terminology (e.g., \"dystonia,\" \"bulbar involvement,\" \"oromandibular region,\" \"contracture,\" \"whole genome sequencing,\" \"variant\").  However, the language is generally clear and accessible to readers with a basic medical background. The abstract avoids overly obscure or technical terms unnecessary for understanding the core findings.\n\n**4. Technical Terminology Usage:**\n\nTechnical terminology is used appropriately and consistently.  The abstract assumes a level of medical knowledge in the reader.  Terms are defined implicitly through context where possible, rather than explicitly explained. For example, the reader needs a base understanding of \"failure to thrive\" and \"dystonia\" for the text to be meaningfully understood.\n\n**5. Argumentation Patterns:**\n\nThe argumentation follows a clear pattern:\n\n* **Introduction:** Establishes the context of KMT2B-related dystonia and its previous limitations in describing non-neurological consequences.\n* **Case Presentation:** Presents a detailed case report of a patient with a novel mutation and failure to thrive.\n* **Literature Review:** Briefly summarizes the existing literature and highlights the rarity of reporting failure to thrive in this context.\n* **Conclusion:** Underscores the clinical implications of the findings, emphasizing the importance of genetic testing and cascade screening.\n\nThe argument is primarily inductive, moving from a specific case to broader implications.\n\n**6. Overall Writing Characteristics:**\n\nThe overall characteristics of this abstract can be summarized as:\n\n* **Conciseness:** The information is densely packed, maximizing efficiency and clarity.\n* **Precision:**  Words are chosen carefully to convey exact meaning.\n* **Objectivity:** There's a complete absence of subjective opinion or interpretation.\n* **Clarity:** Despite the technical nature, the language is straightforward and easily understandable for the intended audience.\n* **Logical Organization:**  The abstract flows logically from introduction to conclusion, presenting information in a structured and coherent manner.\n\n\n**Emulating the Author's Style:**\n\nTo emulate this style, consider these points:\n\n* **Use precise and unambiguous language.**  Avoid jargon unless absolutely necessary, but don't shy away from technical terms relevant to the field.\n* **Prioritize clarity and conciseness.**  Every word should contribute to the overall message.\n* **Maintain a formal and objective tone.**  Avoid colloquialisms, contractions, and subjective opinions.\n* **Structure sentences logically and efficiently.**  Use a mix of simple and complex sentences to vary the rhythm and maintain reader engagement while conveying complex information.\n* **Follow a clear argumentative structure.**  Present your findings systematically, progressing from introduction to conclusion in a logical and persuasive manner.\n* **Use a strong verb tense.**  The majority of the abstract is in the past tense, appropriate for a case study report.\n* **Focus on data and evidence.**  Support your assertions with factual information.\n\n\nBy adhering to these principles, you can create academic writing that is both informative and impactful, mirroring the style exhibited in this abstract.\n"
+        },
+        {
+          "paperId": "d175a5524eea532421a066a696dd3518ce110432",
+          "analysis": "This abstract exhibits a clear, concise, and highly formal writing style typical of a case report in a medical journal. Let's analyze its characteristics:\n\n**1. Tone and Formality Level:** The tone is objective, factual, and highly formal.  There's a complete absence of subjective opinions or informal language. The language maintains a professional distance, focusing solely on presenting the case and its resolution.\n\n**2. Sentence Structure and Complexity:** The sentences are predominantly simple or compound, avoiding complex structures with multiple embedded clauses.  This contributes to clarity and readability. While some sentences are longer, they are generally well-structured and easy to follow.  The focus is on direct and clear communication of information.\n\n**3. Vocabulary Sophistication:** The vocabulary is professional but not overly complex. While technical terms are used (explained below), the overall word choice is accessible to a reasonably well-educated reader familiar with basic medical terminology.  Words are chosen for precision and accuracy rather than to impress.\n\n**4. Technical Terminology Usage:** The abstract uses specific medical terminology (\"plantar fasciitis,\" \"nonsteroidal anti-inflammatory medications,\" \"magnetic resonance imaging,\" \"insertional area,\" \"surgical excision\"). These terms are necessary for accuracy and conciseness within the medical field.  However, the authors don't overuse jargon, ensuring the key points remain understandable.\n\n**5. Argumentation Patterns:**  The abstract follows a straightforward chronological and problem-solution pattern. It presents the problem (plantar fascial pain), the initial diagnosis (plantar fasciitis), the attempts at conservative treatment, the discovery of an atypical cause through imaging (the mass), the intervention (surgical excision), and the successful outcome (pain elimination).  There's no explicit argumentation; it's a presentation of facts leading to a conclusion.\n\n**6. Overall Writing Characteristics:** The writing is characterized by its brevity, clarity, precision, and objectivity.  It prioritizes conveying essential information efficiently and accurately.  There is a strong emphasis on factual reporting and a lack of interpretative commentary or speculation.  The style is highly suitable for its purpose: a concise summary of a clinical case.\n\n\n**Emulating this Style:** To emulate the authors' style, focus on these key elements:\n\n* **Prioritize clarity and conciseness:**  Every word should serve a purpose. Avoid unnecessary embellishment or verbose phrasing.\n* **Use precise and accurate language:**  Choose words that accurately reflect the meaning intended.\n* **Employ appropriate medical terminology:**  Use technical terms where necessary, but ensure the overall text remains understandable to the target audience.\n* **Adopt a factual and objective tone:**  Avoid subjective opinions, speculation, or informal language.\n* **Employ a straightforward sentence structure:**  Prioritize simple and compound sentences for clarity.\n* **Follow a logical and chronological structure:**  Organize information in a clear, coherent manner, often using a problem-solution or chronological approach.\n* **Focus on reporting factual findings:**  The abstract should present data and results without extensive interpretation or discussion.\n\n\nBy adhering to these principles, one can create an academic abstract that is clear, concise, and professional, emulating the style presented in the example. Remember to always tailor the style and complexity to the specific journal's guidelines and target audience.\n"
+        },
+        {
+          "paperId": "9c83fc259066a76a1de77ce380e21fac2f379015",
+          "analysis": "Since no abstract is provided, I cannot analyze its writing style directly.  However, I can offer a hypothetical analysis based on the title \"Penile Ultrasound\" and the author's names, and then provide a model of what *could* be a style guide to emulate an expected style for such a paper.\n\n**Hypothetical Analysis (Based on Title and Assumption of Medical Journal Publication):**\n\nGiven the title \"Penile Ultrasound,\" we can reasonably assume this would be published in a medical journal.  Therefore, we can predict the writing style characteristics:\n\n1. **Tone and Formality Level:** Extremely formal, objective, and impersonal.  Avoidance of any colloquialisms, subjective opinions, or emotional language.  A detached, scientific tone would be paramount.\n\n2. **Sentence Structure and Complexity:** Primarily complex sentences, using subordinate clauses and participial phrases to convey precise information efficiently.  Sentence length will vary but generally lean toward longer, information-dense sentences to pack in technical details.  Conciseness is prioritized over brevity.\n\n3. **Vocabulary Sophistication:** High level of vocabulary, utilizing precise medical terminology and avoiding ambiguity. Words will be chosen for accuracy and clarity, even if they are less commonly understood by a lay audience.\n\n4. **Technical Terminology Usage:**  Extensive use of specialized medical and anatomical terminology.  Abbreviations and acronyms common within the field will be employed (e.g., B-mode, Doppler). Definitions may be given for less common terms, but an understanding of fundamental medical terminology would be assumed.\n\n5. **Argumentation Patterns:**  The abstract (if it existed) would likely present a concise summary of the study's purpose, methodology, key findings, and conclusions. The argumentation would be implicit, focusing on presenting results and their implications rather than explicitly arguing a point.  It would likely follow a standard IMRaD (Introduction, Methods, Results, and Discussion) structure, albeit in a highly condensed form.\n\n6. **Overall Writing Characteristics:** Precise, concise, unambiguous, objective, and data-driven.  The writing aims to communicate technical information efficiently and accurately to a specialist audience.\n\n\n**Model Style Guide to Emulate (Hypothetical):**\n\nTo emulate the anticipated writing style of the \"Penile Ultrasound\" paper, consider the following guidelines:\n\n* **Clarity and Precision:**  Prioritize using the most accurate and precise language to convey information without ambiguity. Avoid vague or general terms.\n\n* **Formal Tone:** Maintain a completely objective and impersonal tone throughout. Avoid contractions, colloquialisms, and personal opinions.  Use passive voice where appropriate for objectivity.\n\n* **Technical Vocabulary:** Employ appropriate medical and anatomical terminology. Define any less common terms, but assume a reader familiar with basic medical concepts.\n\n* **Sentence Structure:**  Use a mix of sentence lengths, but lean towards complex sentences for efficiency in conveying detailed information. Employ a variety of grammatical structures (e.g., participial phrases, appositives) to achieve concision.\n\n* **Conciseness:**  Use as few words as possible while maintaining clarity.  Avoid wordiness and redundancy.\n\n* **Objectivity:**  Focus on presenting facts and data.  Avoid subjective interpretations or speculations.\n\n* **Structure:** If writing an abstract, adhere to the IMRaD structure.  Be concise and to the point in each section.\n\n* **Referencing:** If referencing other works, adhere to a consistent citation style appropriate to the medical field (e.g., AMA, Vancouver).\n\n\nBy adhering to these guidelines, one could produce writing that emulates the style expected in a medical journal article like the hypothetical \"Penile Ultrasound\" paper.  Remember that without the actual abstract, this is a predicted style.  Different journals may also have subtly different stylistic preferences.\n"
+        }
+      ],
+      "isPublic": false,
+      "userId": null,
+      "errorMessage": null
+    },
+
+    {
+      "id": "6897baab14878d8dff314ee4",
+      "name": "gsdgsd",
+      "type": "custom",
+      "status": "ready",
+      "sourceCount": 1,
+      "createdAt": "2025-08-09T21:16:27.548Z",
+      "updatedAt": "2025-08-09T21:16:36.466Z",
+      "sourcePapers": [
+        {
+          "id": "5c4139b05fd359052d7dfa133e650d846403fcd2",
+          "title": "Grapes Leaf Disease Detection using Convolutional Neural Network",
+          "authors": [
+            "T. A. Wagh",
+            "R. Samant",
+            "Sharvil V. Gujarathi",
+            "S. Gaikwad",
+            "S. S. Patil",
+            "Sandeep A. Thorat",
+            "Nitesh Agrawal",
+            "Jyoti Singhai",
+            "D. Agrawal",
+            "Harshal Waghmare",
+            "R. Kokare",
+            "Hulya Yalcin",
+            "A. Krizhevsky",
+            "I. Sutskever",
+            "Geoffrey E. Hinton"
+          ],
+          "year": 2025,
+          "abstract": "Grapes (Vitis Vinifera) is basically a sub-tropical plant having excellent pulp content, rich color and is highly beneficial to health. Generally, it is very time-consuming and laborious for farmers of remote areas to identify grapes leaf diseases due to unavailability of experts. Though experts are available in some areas, disease detection is performed by naked eye which causes inappropriate recognition. An automated system can minimize these problems. The disease on the grape plant usually starts on the leaf and then moves onto the stem, root and the fruit. Once the disease reaches the fruit the whole plant gets destroyed. The approach is to detect the disease on the leaf itself in order to save the fruit. In our proposed system we have used a Deep Learning model named Convolutional Neural Network. Feature extraction and model training of the leaf images is performed using pre-defined AlexNet architecture. The image Dataset is taken from “National Research Centre for Grapes” (ICAR). It consists of images of diseases named Powdery mildew, Downy mildew, Rust, Bacterial Spots and Anthracnose. Image of the leaf is captured using the built-in camera module of a mobile phone. The accuracy achieved is",
+          "url": "https://www.semanticscholar.org/paper/5c4139b05fd359052d7dfa133e650d846403fcd2",
+          "isOpenAccess": true
+        }
+      ],
+      "styleProfile": {
+        "tone": "Descriptive, explanatory, slightly informal; prioritizes clarity over stylistic elegance.",
+        "keywords": [
+          "Convolutional Neural Network",
+          "CNN",
+          "Deep Learning",
+          "Accuracy",
+          "Image Classification",
+          "Dataset",
+          "Algorithm",
+          "Model",
+          "Performance",
+          "Results"
+        ],
+        "sentenceStyle": "Short, simple sentences are prevalent.  Complex sentence structures are less common, leading to a linear and straightforward presentation of information.  Limited use of sophisticated grammatical constructions.",
+        "complexity": "simple",
+        "formalityLevel": "professional (but bordering on casual)",
+        "writingPatterns": [
+          "Problem-Solution-Methodology-Results (PSMR) structure; inductive reasoning; emphasis on practical application and tangible outcomes; direct, step-by-step explanation; limited theoretical discussion; infrequent use of strong thesis statements; often lacks a strong concluding statement summarizing significance."
+        ],
+        "vocabularyLevel": "Relatively accessible; technical terms are used but often without extensive explanation, assuming some prior familiarity with the field.  Avoids highly specialized jargon.",
+        "structuralPreferences": [
+          "Linear paragraph structure; short paragraphs; clear section headings (if applicable); straightforward presentation of findings; minimal use of advanced rhetorical devices or persuasive techniques; focus on factual reporting."
+        ]
+      },
+      "linguisticFingerprint": null,
+      "originalTexts": [],
+      "paperAnalyses": [
+        {
+          "paperId": "5c4139b05fd359052d7dfa133e650d846403fcd2",
+          "analysis": "This abstract demonstrates a writing style common in early-stage computer science research, particularly in areas with practical applications.  Let's break down its characteristics:\n\n**1. Tone and Formality Level:** The tone is relatively informal and descriptive, bordering on explanatory.  While it uses academic language, it lacks the highly concise and impactful style often found in top-tier publications.  The phrases \"basically,\" \"generally,\" and \"usually\" detract from the formal tone.\n\n**2. Sentence Structure and Complexity:** The sentences are generally short and simple.  Complex sentence structures are largely absent. This contributes to a lack of flow and a slightly disjointed feel.  The information is presented in a linear, almost narrative fashion.\n\n**3. Vocabulary Sophistication:** The vocabulary is not particularly sophisticated. While technical terms are used (Convolutional Neural Network, AlexNet), the overall word choice is accessible and avoids overly specialized jargon.\n\n**4. Technical Terminology Usage:**  Technical terms are introduced without much explanation. The abstract assumes a basic familiarity with deep learning concepts like Convolutional Neural Networks (CNNs) and AlexNet. The abbreviation ICAR is used without explanation.  This is acceptable given the abstract's brevity, but a more complete paper would provide definitions or context.\n\n**5. Argumentation Patterns:** The argument is straightforward and inductive. It starts by establishing a problem (difficulty of grape leaf disease detection), presents a solution (automated system using CNN), briefly describes the methodology, and hints at the result (accuracy achieved).  It lacks a strong, explicitly stated thesis statement. The argumentation is more descriptive than analytical.\n\n**6. Overall Writing Characteristics:** The writing is functional rather than elegant.  It prioritizes clarity and conveying the basic information, but sacrifices stylistic polish and impactful phrasing.  It reads more like a project report summary than a sophisticated academic abstract.  The lack of a concluding statement about the significance of the findings is also notable.\n\n\n**Emulating this Author's Style:**\n\nTo emulate this style, one would focus on:\n\n* **Simplicity and Clarity:** Prioritize conveying information clearly and directly, using short, simple sentences. Avoid complex sentence structures unless absolutely necessary.\n* **Accessible Language:** Use a relatively accessible vocabulary.  While technical terms are essential, explain them briefly if the audience's familiarity is uncertain.  For a more formal tone, avoid overly colloquial expressions like \"basically\" and \"generally.\"\n* **Linear Presentation:** Present information in a straightforward, linear fashion, step-by-step. Avoid intricate interwoven arguments or complex logical structures.\n* **Descriptive Approach:** Focus on describing the problem, the solution, the methodology, and the results, without delving deeply into the theoretical underpinnings or critical analysis.\n* **Emphasis on Practical Application:** Highlight the practical implications and benefits of the research.\n\nHowever, it's crucial to note that this style is not ideal for all academic contexts.  For higher-impact publications, a more sophisticated and concise style, emphasizing strong argumentation and impactful phrasing, would be necessary.  This abstract serves as an example of a less polished, more descriptive style often seen in early-stage research presentations or conference proceedings.  One could improve the above abstract considerably by adding a strong conclusion, defining abbreviations, using more concise language, and removing informal phrasing.\n"
+        }
+      ],
+      "isPublic": false,
+      "userId": null,
+      "errorMessage": null
+    },
+    {
+      "id": "6897b82ba5ec7fa63c72c134",
+      "name": "t gf f",
+      "type": "custom",
+      "status": "ready",
+      "sourceCount": 3,
+      "createdAt": "2025-08-09T21:05:47.447Z",
+      "updatedAt": "2025-08-09T21:05:56.357Z",
+      "sourcePapers": [
+        {
+          "id": "053b1a32320d002b7b77faa4f967721b7c7c141c",
+          "title": "Unusual high-grade and low-grade glioma in an infant with PPP1CB-ALK gene fusion",
+          "authors": [
+            "A. Ng",
+            "M. Levy",
+            "D. Malicki",
+            "J. Crawford"
+          ],
+          "year": 2025,
+          "abstract": "A previously healthy 3-month-old former 30-week premature girl presented with sudden onset altered mental status and cardiopulmonary arrest.[1][1] CT scan showed a 10.2 cm hyperdense lesion in the right hemisphere with areas of acute haemorrhage causing subfalcine, uncal and inferior cerebellar",
+          "url": "https://www.semanticscholar.org/paper/053b1a32320d002b7b77faa4f967721b7c7c141c",
+          "isOpenAccess": true
+        },
+        {
+          "id": "d175a5524eea532421a066a696dd3518ce110432",
+          "title": "Atypical presentation of plantar fasciitis secondary to soft-tissue mass infiltration.",
+          "authors": [
+            "A. Ng",
+            "T. Beegle",
+            "A. Rockett"
+          ],
+          "year": 2025,
+          "abstract": "This article describes a patient with plantar fascial pain who presented to the office of one of the authors. Physical examination and the patient's description of the history of symptoms revealed classic signs and symptoms of plantar fasciitis. The patient was treated with numerous conservative modalities, including ultrasound, nonsteroidal anti-inflammatory medications, trigger-point injections, over-the-counter orthoses, and stretching exercises. When the pain was not relieved by these conservative measures, magnetic resonance imaging of the area was performed. Visualization of the insertional area of the plantar fascia revealed a mass inferior to, as well as infiltrated into, the plantar fascia. Surgical excision of the lesion resulted in complete elimination of the patient's pain.",
+          "url": "https://www.semanticscholar.org/paper/d175a5524eea532421a066a696dd3518ce110432",
+          "isOpenAccess": false
+        },
+        {
+          "id": "adf1898e45a25fa10b1db06cce8ff0767602f7a7",
+          "title": "Giant hepatic haemangioma rupture in a patient on direct oral anticoagulant therapy",
+          "authors": [
+            "M. Nguyen",
+            "A. Lim",
+            "E. Jeyarajan",
+            "M. Koh",
+            "A. Ng",
+            "Phillip Townend"
+          ],
+          "year": 2025,
+          "abstract": "Abstract Rupture of a liver haemangioma is extremely rare, with less than 100 cases reported in the literature. This is the first case known to date reporting a rupture occurring with direct oral anticoagulant therapy. A 76-year-old woman presented with acute abdominal pain and syncope in the context of commencing apixaban 4 weeks prior. Abdominal computed tomography and angiography demonstrated a large heterogenous mass in the left liver lobe with contrast blush suggestive of a bleeding tumour. Urgent transcatheter arterial embolization successfully ceased haemorrhage. Due to persistent compressive symptoms, a left lateral hepatectomy was performed. CD34 immunostaining of the tissue revealed variably sized vessels, which was consistent with a ruptured giant hepatic haemangioma. Our case substantiates the limited available literature regarding ruptured haemangiomas. Combined with previous case reports, this report will significantly contribute to our understanding of the risk factors, diagnosis and surgical indications for ruptured hepatic haemangiomas.",
+          "url": "https://www.semanticscholar.org/paper/adf1898e45a25fa10b1db06cce8ff0767602f7a7",
+          "isOpenAccess": true
+        }
+      ],
+      "styleProfile": {
+        "tone": "Formal, Objective, Clinical",
+        "keywords": [
+          "patient",
+          "presentation",
+          "diagnosis",
+          "treatment",
+          "imaging",
+          "lesion",
+          "surgery",
+          "medication",
+          "results",
+          "findings",
+          "case report",
+          "medical",
+          "therapy",
+          "intervention"
+        ],
+        "sentenceStyle": "Predominantly short, declarative sentences; some complex sentences used for detailed descriptions, but overall structure remains clear and concise.",
+        "complexity": "moderate",
+        "formalityLevel": "academic",
+        "writingPatterns": [
+          "Chronological narrative of case presentation (patient demographics, symptoms, diagnosis, treatment, outcome)",
+          "Emphasis on objective facts and clinical data",
+          "Sparse use of subjective opinions or interpretations",
+          "Frequent use of passive voice to maintain objectivity",
+          "Concise and direct writing style with minimal extraneous information"
+        ],
+        "vocabularyLevel": "Sophisticated within the medical domain; utilizes precise technical terminology appropriate for a specialist audience.  Assumes reader familiarity with standard medical abbreviations and terminology.",
+        "structuralPreferences": [
+          "Case report format (introduction, methods, results, discussion)",
+          "Logical and chronological presentation of information",
+          "Clear and concise headings and subheadings (if applicable)",
+          "Emphasis on brevity and accuracy of information"
+        ]
+      },
+      "linguisticFingerprint": null,
+      "originalTexts": [],
+      "paperAnalyses": [
+        {
+          "paperId": "053b1a32320d002b7b77faa4f967721b7c7c141c",
+          "analysis": "The provided abstract excerpt exhibits a style characteristic of concise, clinically-focused medical reporting. Let's analyze its features:\n\n**1. Tone and Formality Level:** The tone is highly formal and objective, devoid of any subjective opinions or interpretations.  It's purely descriptive and factual, relying on precise clinical terminology. The language is unemotional, reflecting the typical style of a medical case report.\n\n**2. Sentence Structure and Complexity:** The sentences are relatively short and declarative.  The first sentence introduces the patient's background concisely. The second sentence immediately launches into the presenting symptoms and initial imaging findings.  While grammatically correct, the complexity is limited;  long, convoluted sentences are avoided for clarity and directness.  The style prioritizes getting information across efficiently.\n\n**3. Vocabulary Sophistication:** The vocabulary is sophisticated, but specifically within the domain of medicine and neuroimaging. While terms like \"hyperdense lesion,\" \"haemorrhage,\" \"subfalcine,\" \"uncal,\" and \"cerebellar\" are technically precise, they would not be considered sophisticated outside of a medical context.  The language used is precisely chosen for accuracy rather than aiming for literary elegance.\n\n**4. Technical Terminology Usage:** The abstract is heavily reliant on technical medical terminology.  Abbreviations (like CT for computed tomography) are used without explanation, assuming the reader possesses the necessary medical background. This reflects the targeted audience of medical professionals.  The specificity of terms is crucial for accurate communication within the field.\n\n**5. Argumentation Patterns:** There's no explicit argumentation in this excerpt; it's a description of a case presentation. The structure follows a typical clinical case report format:  patient demographics, presenting complaint, initial findings. It sets the stage for the full paper, which presumably will include discussion, analysis, and conclusions.  The implicit argument is in the novelty of the case – the unusual combination of glioma and gene fusion.\n\n**6. Overall Writing Characteristics:** The writing is characterized by its brevity, precision, objectivity, and clinical focus.  Clarity and accuracy are paramount; literary flourishes or stylistic embellishments are absent.  The emphasis is on presenting factual information efficiently to a specialized audience.  The style could be described as \"dense\" in that a great deal of information is packed into a small space.\n\n\n**Emulating the Author's Style:** To emulate this style, focus on the following:\n\n* **Conciseness:**  Avoid unnecessary words or phrases.  Get straight to the point.\n* **Precision:** Use precise technical terminology appropriate to your field.\n* **Objectivity:**  Maintain a neutral, impersonal tone. Avoid subjective interpretations or opinions.\n* **Declarative Sentences:** Favor short, declarative sentences for clarity.\n* **Technical Vocabulary:** Utilize specialized terminology relevant to your subject matter. Assume a knowledgeable audience.\n* **Directness:**  Present information directly and efficiently.\n* **Structured Approach:** Follow a logical structure, similar to a case report format or scientific method, depending on the context.\n\n\nBy adhering to these principles, you can effectively replicate the concise and technically precise writing style demonstrated in this medical abstract excerpt. Remember to always tailor your style to the specific requirements and audience of your work.\n"
+        },
+        {
+          "paperId": "d175a5524eea532421a066a696dd3518ce110432",
+          "analysis": "This abstract demonstrates a clear, concise, and highly formal writing style typical of a case report in a medical journal.  Let's analyze its characteristics:\n\n1. **Tone and Formality Level:** The tone is entirely objective, factual, and highly formal.  There's no subjective opinion or speculation; the language focuses solely on reporting the case and its treatment.  The passive voice (\"The patient was treated...\") is frequently used to maintain this objective tone.\n\n2. **Sentence Structure and Complexity:** The sentences are predominantly simple and declarative.  While some sentences contain multiple clauses, they are generally straightforward and easy to follow. There's a preference for short, concise sentences over lengthy, complex ones. This contributes to clarity and readability.\n\n3. **Vocabulary Sophistication:** The vocabulary is technically precise but not overly complex.  While terms like \"conservative modalities,\" \"magnetic resonance imaging,\" and \"insertional area\" are used, they are easily understood within the medical context. The authors avoid unnecessarily obscure language.\n\n4. **Technical Terminology Usage:** The abstract makes appropriate use of technical medical terminology relevant to the case. Terms like \"plantar fasciitis,\" \"nonsteroidal anti-inflammatory medications,\" \"trigger-point injections,\" and \"surgical excision\" are all standard medical terms.  The authors assume a reader with a basic understanding of medical terminology.\n\n5. **Argumentation Patterns:**  This abstract doesn't present a formal argument in the traditional sense.  Instead, it follows a chronological narrative structure.  The argument, implicitly, is that atypical presentation of plantar fasciitis can sometimes mask an underlying mass, requiring imaging and surgical intervention. This is shown through the description of the patient's treatment and the eventual discovery of the mass.\n\n6. **Overall Writing Characteristics:** The writing is precise, concise, and highly focused.  Every sentence contributes directly to the description of the case and its outcome. There's no unnecessary detail or digression. The style prioritizes clarity and factual accuracy above all else.\n\n\n**Emulating the Author's Style:** To emulate this style, you should:\n\n* **Prioritize objectivity:** Avoid subjective opinions or interpretations.  Use the passive voice frequently to emphasize the facts.\n* **Maintain conciseness:**  Use short, declarative sentences.  Avoid unnecessary words or phrases.\n* **Employ precise technical language:** Use accurate medical terminology where appropriate, but ensure it is easily understandable within the context.  Avoid jargon unless it's essential.\n* **Adopt a chronological narrative structure:** For case reports, a straightforward timeline of events usually works best.\n* **Focus on clarity and readability:** Ensure the text is easily understood by the target audience. Avoid ambiguity and complex sentence structures unless absolutely necessary.\n* **Use active voice sparingly:** Although the abstract primarily uses passive voice, active voice can be used for emphasis, particularly when describing procedures or actions.  For example, \"The surgeons excised the lesion\" is more direct than \"The lesion was excised by the surgeons.\"  However, this should be used judiciously.\n\nBy adhering to these principles, you can effectively mimic the clear, concise, and objective writing style of this medical abstract.  Remember to always tailor your writing to your specific audience and purpose.\n"
+        },
+        {
+          "paperId": "adf1898e45a25fa10b1db06cce8ff0767602f7a7",
+          "analysis": "This abstract exhibits a concise, formal, and highly technical writing style characteristic of medical case reports. Let's analyze it based on your criteria:\n\n**1. Tone and Formality Level:** The tone is objective, factual, and highly formal.  There's no room for subjective opinions or speculation.  The language is precise and avoids colloquialisms or figurative language. The use of passive voice (\"was performed,\" \"was consistent with\") is prevalent, which is common in scientific writing to emphasize the objectivity of the findings.\n\n**2. Sentence Structure and Complexity:** The sentences are relatively short and straightforward, prioritizing clarity over elaborate sentence structures.  While some sentences are complex (e.g., the sentence describing the patient's presentation), they are well-structured and easy to follow.  The overall structure is linear and chronological, mirroring the sequence of events in the case.\n\n**3. Vocabulary Sophistication:** The vocabulary is sophisticated, reflecting the technical nature of the subject matter.  Terms like \"heterogeneous,\" \"transcatheter arterial embolization,\" \"hepatectomy,\" and \"immunostaining\" are used without explanation, demonstrating an assumption of the reader's medical background.\n\n**4. Technical Terminology Usage:**  The abstract is densely packed with technical medical terminology (\"haemangioma,\" \"apixaban,\" \"contrast blush,\" \"CD34 immunostaining,\" \"hepatectomy\").  Abbreviations are used sparingly (\"CT\" is implied, but not explicitly stated) and are likely to be understood within the target audience.  There is no attempt to simplify the language for a lay audience.\n\n**5. Argumentation Patterns:** The argumentation is primarily descriptive and inferential, rather than explicitly persuasive.  The authors present the case, describe the diagnostic and treatment procedures, and state the clinical findings. The argument is implicit: the rarity of the case and its unique association with apixaban make it noteworthy and contribute to existing knowledge. The concluding sentence asserts the contribution to understanding risk factors, diagnosis, and surgical indications. This is a classic case report structure.\n\n**6. Overall Writing Characteristics:** The writing is concise, precise, and highly focused.  Every sentence serves a purpose in conveying essential clinical information. The structure is clear and logical, following a standard case report format.  The abstract effectively summarizes the key findings without unnecessary detail.  The style is direct, objective, and devoid of any rhetorical flourish.\n\n\n**Emulating the Author's Style:**\n\nTo emulate this style, focus on the following:\n\n* **Objectivity:** Prioritize factual accuracy and avoid subjective opinions or interpretations.\n* **Precision:** Use precise and unambiguous language. Avoid vague terms or generalizations.\n* **Conciseness:**  Be brief and to the point.  Avoid unnecessary words or phrases.\n* **Technical Vocabulary:** Use appropriate technical terminology, assuming a knowledgeable audience.  Define only essential terms not commonly understood within the field.\n* **Passive Voice:** Employ passive voice to emphasize the actions and results rather than the actors.\n* **Standard Sentence Structure:** Use clear and concise sentence structures.  Avoid overly complex or convoluted sentences.\n* **Chronological Order:**  Present information in a logical and chronological order.\n* **Formal Tone:** Maintain a formal and objective tone throughout.\n* **Emphasis on Results:** Focus on reporting findings and avoid lengthy discussions or interpretations in the abstract itself (those go in the full paper).\n\n\nBy adhering to these guidelines, you can adopt a writing style similar to that demonstrated in this medical case report abstract. Remember to tailor the level of technical detail to the specific audience and publication.\n"
+        }
+      ],
+      "isPublic": false,
+      "userId": null,
+      "errorMessage": null
+    },
+    {
+      "id": "6897b804a5ec7fa63c72c12d",
+      "name": "gbrgb",
+      "type": "custom",
+      "status": "ready",
+      "sourceCount": 1,
+      "createdAt": "2025-08-09T21:05:08.632Z",
+      "updatedAt": "2025-08-09T21:05:16.058Z",
+      "sourcePapers": [
+        {
+          "id": "5c4139b05fd359052d7dfa133e650d846403fcd2",
+          "title": "Grapes Leaf Disease Detection using Convolutional Neural Network",
+          "authors": [
+            "T. A. Wagh",
+            "R. Samant",
+            "Sharvil V. Gujarathi",
+            "S. Gaikwad",
+            "S. S. Patil",
+            "Sandeep A. Thorat",
+            "Nitesh Agrawal",
+            "Jyoti Singhai",
+            "D. Agrawal",
+            "Harshal Waghmare",
+            "R. Kokare",
+            "Hulya Yalcin",
+            "A. Krizhevsky",
+            "I. Sutskever",
+            "Geoffrey E. Hinton"
+          ],
+          "year": 2025,
+          "abstract": "Grapes (Vitis Vinifera) is basically a sub-tropical plant having excellent pulp content, rich color and is highly beneficial to health. Generally, it is very time-consuming and laborious for farmers of remote areas to identify grapes leaf diseases due to unavailability of experts. Though experts are available in some areas, disease detection is performed by naked eye which causes inappropriate recognition. An automated system can minimize these problems. The disease on the grape plant usually starts on the leaf and then moves onto the stem, root and the fruit. Once the disease reaches the fruit the whole plant gets destroyed. The approach is to detect the disease on the leaf itself in order to save the fruit. In our proposed system we have used a Deep Learning model named Convolutional Neural Network. Feature extraction and model training of the leaf images is performed using pre-defined AlexNet architecture. The image Dataset is taken from “National Research Centre for Grapes” (ICAR). It consists of images of diseases named Powdery mildew, Downy mildew, Rust, Bacterial Spots and Anthracnose. Image of the leaf is captured using the built-in camera module of a mobile phone. The accuracy achieved is",
+          "url": "https://www.semanticscholar.org/paper/5c4139b05fd359052d7dfa133e650d846403fcd2",
+          "isOpenAccess": true
+        }
+      ],
+      "styleProfile": {
+        "tone": "Descriptive, slightly informal, problem-solving oriented",
+        "keywords": [
+          "Convolutional Neural Network",
+          "CNN",
+          "AlexNet",
+          "feature extraction",
+          "model training",
+          "accuracy",
+          "disease detection",
+          "image classification"
+        ],
+        "sentenceStyle": "Predominantly simple and declarative sentences; limited use of complex sentence structures or subordination.",
+        "complexity": "simple",
+        "formalityLevel": "casual",
+        "writingPatterns": [
+          "Step-by-step process description",
+          "Problem statement followed by solution proposal",
+          "Emphasis on practical application and results (often without detailed statistical significance)",
+          "Linear narrative structure",
+          "Limited use of sophisticated argumentation or theoretical framing"
+        ],
+        "vocabularyLevel": "Basic vocabulary with limited use of specialized terminology beyond core technical terms; occasional colloquialisms.",
+        "structuralPreferences": [
+          "Linear progression of research stages",
+          "Focus on methods and results with less emphasis on theoretical background or discussion",
+          "Limited use of transitions or complex organizational structures"
+        ]
+      },
+      "linguisticFingerprint": null,
+      "originalTexts": [],
+      "paperAnalyses": [
+        {
+          "paperId": "5c4139b05fd359052d7dfa133e650d846403fcd2",
+          "analysis": "This abstract exhibits a writing style common in early-stage, potentially undergraduate-level, research papers focusing on applied computer science. Let's analyze it based on your criteria:\n\n\n1. **Tone and Formality Level:** The tone is relatively informal and descriptive, bordering on overly simplistic. While aiming for formality through the use of technical terms, the explanatory style lacks the concise and direct precision expected in a strong academic abstract. Phrases like \"basically a sub-tropical plant\" and \"it is very time-consuming and laborious\" detract from the professional tone.\n\n\n2. **Sentence Structure and Complexity:** Sentences are generally short and simple.  Complex sentence structures are largely absent, hindering the flow of information and the development of nuanced arguments.  Many sentences are declarative and lack subordination or parallel structure.\n\n\n3. **Vocabulary Sophistication:** The vocabulary is basic, avoiding highly specialized terms except for \"Convolutional Neural Network\" and \"AlexNet.\"  The choice of words leans towards colloquialisms (\"Generally,\" \"Once the disease reaches\").\n\n\n4. **Technical Terminology Usage:**  While the abstract mentions key terms like \"Convolutional Neural Network,\" \"AlexNet,\" \"feature extraction,\" \"model training,\" and specific grape diseases, the introduction of these terms isn't seamlessly integrated.  The explanation of the technical aspects is somewhat superficial.\n\n\n5. **Argumentation Patterns:** The argumentation is primarily descriptive and problem-solving oriented.  The abstract states a problem (inefficient disease detection), proposes a solution (CNN-based system), and mentions the data source and a result (accuracy—though the value is missing).  There's minimal explicit justification for the chosen methodology beyond its being an \"automated system.\"\n\n\n6. **Overall Writing Characteristics:** The abstract reads more like a project report summary than a concise and impactful academic abstract.  It lacks a strong concluding statement summarizing the key findings or contributions.  The structure is linear and descriptive, prioritizing a step-by-step account over a focused presentation of the research's novelty and significance.\n\n\n**To emulate this author's style (though it is not recommended for publication in a high-quality journal):**\n\n* **Use simple, declarative sentences:** Prioritize clear, straightforward sentences over complex structures.\n* **Employ basic vocabulary:** Avoid overly technical or specialized language unless absolutely necessary.\n* **Focus on a descriptive approach:** Detail the steps of the research process clearly, rather than focusing on sophisticated argumentation.\n* **Emphasize problem-solving:** Frame the research as a solution to a practical problem.\n* **Include a step-by-step account:** Organize the information chronologically, outlining each stage of the research.\n* **Maintain a slightly informal tone:** Avoid overly formal language or overly technical jargon that might be inaccessible to a wider audience.\n\n**Important Note:**  While the above points describe the style present in the provided abstract, it is *not* a style to be emulated in high-quality academic writing.  A better approach would involve a more concise, impactful abstract with a stronger emphasis on the novelty of the work, clearer presentation of the methodology and results, and a sophisticated, more formal tone.  The inclusion of the full list of authors, many of whom are very well-known in deep learning, also suggests a potentially unusual collaborative authorship and doesn't align with typical abstract writing practices.\n"
+        }
+      ],
+      "isPublic": false,
+      "userId": null,
+      "errorMessage": null
+    },
+    {
+      "id": "6897b309d6551b7c346df036",
+      "name": "uiluykl",
+      "type": "custom",
+      "status": "ready",
+      "sourceCount": 1,
+      "createdAt": "2025-08-09T20:43:53.668Z",
+      "updatedAt": "2025-08-09T20:44:00.706Z",
+      "sourcePapers": [
+        {
+          "id": "5c4139b05fd359052d7dfa133e650d846403fcd2",
+          "title": "Grapes Leaf Disease Detection using Convolutional Neural Network",
+          "authors": [
+            "T. A. Wagh",
+            "R. Samant",
+            "Sharvil V. Gujarathi",
+            "S. Gaikwad",
+            "S. S. Patil",
+            "Sandeep A. Thorat",
+            "Nitesh Agrawal",
+            "Jyoti Singhai",
+            "D. Agrawal",
+            "Harshal Waghmare",
+            "R. Kokare",
+            "Hulya Yalcin",
+            "A. Krizhevsky",
+            "I. Sutskever",
+            "Geoffrey E. Hinton"
+          ],
+          "year": 2025,
+          "abstract": "Grapes (Vitis Vinifera) is basically a sub-tropical plant having excellent pulp content, rich color and is highly beneficial to health. Generally, it is very time-consuming and laborious for farmers of remote areas to identify grapes leaf diseases due to unavailability of experts. Though experts are available in some areas, disease detection is performed by naked eye which causes inappropriate recognition. An automated system can minimize these problems. The disease on the grape plant usually starts on the leaf and then moves onto the stem, root and the fruit. Once the disease reaches the fruit the whole plant gets destroyed. The approach is to detect the disease on the leaf itself in order to save the fruit. In our proposed system we have used a Deep Learning model named Convolutional Neural Network. Feature extraction and model training of the leaf images is performed using pre-defined AlexNet architecture. The image Dataset is taken from “National Research Centre for Grapes” (ICAR). It consists of images of diseases named Powdery mildew, Downy mildew, Rust, Bacterial Spots and Anthracnose. Image of the leaf is captured using the built-in camera module of a mobile phone. The accuracy achieved is",
+          "url": "https://www.semanticscholar.org/paper/5c4139b05fd359052d7dfa133e650d846403fcd2",
+          "isOpenAccess": true
+        }
+      ],
+      "styleProfile": {
+        "tone": "Informal, Descriptive, Explanatory",
+        "keywords": [
+          "Convolutional Neural Network",
+          "CNN",
+          "AlexNet",
+          "Accuracy",
+          "Image Classification",
+          "Deep Learning",
+          "Dataset",
+          "Performance"
+        ],
+        "sentenceStyle": "Simple, Declarative, Short sentences; Low use of complex grammatical structures (subordinate clauses, participial phrases)",
+        "complexity": "simple",
+        "formalityLevel": "casual",
+        "writingPatterns": [
+          "Chronological presentation of steps and procedures",
+          "Descriptive rather than analytical argumentation",
+          "Emphasis on 'what' was done rather than 'why' or 'implications'",
+          "Direct statement of problem and solution without clear hypothesis"
+        ],
+        "vocabularyLevel": "Relatively simple vocabulary with occasional use of technical terms lacking sufficient explanation; imprecise word choices are present; mismatch between simple and advanced vocabulary.",
+        "structuralPreferences": [
+          "Problem-Solution structure",
+          "Step-by-step explanation of methodology",
+          "Focus on results with limited interpretation or analysis"
+        ]
+      },
+      "linguisticFingerprint": null,
+      "originalTexts": [],
+      "paperAnalyses": [
+        {
+          "paperId": "5c4139b05fd359052d7dfa133e650d846403fcd2",
+          "analysis": "The abstract exhibits a writing style characteristic of early-stage, possibly undergraduate-level, research papers focusing on applied technology.  Let's break down the aspects you requested:\n\n1. **Tone and Formality Level:** The tone is informal and descriptive, lacking the concise and impactful nature typically found in high-quality academic abstracts.  Phrases like \"basically,\" \"generally,\" and \"highly beneficial to health\" are too colloquial for a formal academic setting. The formality level is low.\n\n2. **Sentence Structure and Complexity:** The sentence structures are predominantly simple and declarative.  Sentences are often short and lack complex grammatical structures (e.g., subordinate clauses, participial phrases).  This makes the text easy to read but lacks the sophistication of more complex sentence structures found in advanced academic writing.\n\n3. **Vocabulary Sophistication:** The vocabulary is relatively simple and lacks precision. While terms like \"Convolutional Neural Network\" and \"AlexNet architecture\" are technically sophisticated, they are embedded within a simpler vocabulary, creating a mismatch.  Words like \"excellent pulp content\" and \"inappropriate recognition\" are not the most precise or academic choices.\n\n4. **Technical Terminology Usage:** The abstract uses some crucial technical terms (CNN, AlexNet, Powdery mildew, etc.), but the explanation of these terms is insufficient for a reader unfamiliar with the field. The terms are simply stated without proper introduction or context.\n\n5. **Argumentation Patterns:** The argumentation is descriptive rather than analytical.  The abstract states the problem (laborious disease detection), proposes a solution (CNN), and mentions a result (accuracy achieved – but the value is missing!).  It lacks a clear statement of the research question or hypothesis. The logical flow of ideas is straightforward but not rigorously presented.\n\n6. **Overall Writing Characteristics:** The writing is characterized by its informality, simplicity, and lack of conciseness.  It reads more like a project report than a polished academic abstract.  It prioritizes explanation over argumentation and lacks the critical analysis expected in advanced research.\n\n\n**Emulating this style (with caveats):**\n\nTo emulate this style (though it's not a style to aspire to in formal academic writing), one should focus on:\n\n* **Simplicity:** Use short, declarative sentences. Minimize complex grammatical structures.\n* **Descriptive Language:** Prioritize explaining the process over making strong analytical claims.  Focus on what was done rather than the implications of what was done.\n* **Informal Tone:**  Use less formal vocabulary and phraseology.  Avoid overly technical language without clear explanations.\n* **Straightforward Structure:** Present information chronologically, emphasizing steps and procedures.\n\n\n**Important Caveat:** This style is NOT a good model for high-quality academic writing.  This abstract needs significant improvement in terms of conciseness, formality, and argumentation to meet the standards of a peer-reviewed publication.  This analysis serves to highlight the stylistic weaknesses, not to endorse them.  For a better abstract, the authors should focus on stronger claims, more precise language, and a more rigorous presentation of their findings.\n"
+        }
+      ],
+      "isPublic": false,
+      "userId": null,
+      "errorMessage": null
+    },
+    {
+      "id": "68905c307aa526e7490b5bdb",
+      "name": "hello",
+      "type": "custom",
+      "status": "ready",
+      "sourceCount": 5,
+      "createdAt": "2025-08-04T07:07:29.028Z",
+      "updatedAt": "2025-08-04T07:07:39.092Z",
+      "sourcePapers": [
+        {
+          "id": "053b1a32320d002b7b77faa4f967721b7c7c141c",
+          "title": "Unusual high-grade and low-grade glioma in an infant with PPP1CB-ALK gene fusion",
+          "authors": [
+            "A. Ng",
+            "M. Levy",
+            "D. Malicki",
+            "J. Crawford"
+          ],
+          "year": 2025,
+          "abstract": "A previously healthy 3-month-old former 30-week premature girl presented with sudden onset altered mental status and cardiopulmonary arrest.[1][1] CT scan showed a 10.2 cm hyperdense lesion in the right hemisphere with areas of acute haemorrhage causing subfalcine, uncal and inferior cerebellar",
+          "url": "https://www.semanticscholar.org/paper/053b1a32320d002b7b77faa4f967721b7c7c141c",
+          "isOpenAccess": true
+        },
+        {
+          "id": "b3a6dc4271dcb6b5f9c37933b3c8db4c1cc3e215",
+          "title": "Failure to thrive - an overlooked manifestation of KMT2B-related dystonia: a case presentation",
+          "authors": [
+            "A. Ng",
+            "S. Galosi",
+            "Lisa Salz",
+            "Terence Wong",
+            "Caitlin R. Schwager",
+            "S. Amudhavalli",
+            "Rose Gelineau-Morel",
+            "S. Chowdhury",
+            "J. Friedman"
+          ],
+          "year": 2025,
+          "abstract": "KMT2B-related dystonia is a recently described form of childhood onset dystonia that may improve with deep brain stimulation. Prior reports have focused on neurologic features including prominent bulbar involvement without detailing general health consequences that may result from orolingual dysfunction. We describe a family with novel KMT2B mutation with several members with failure to thrive to highlight this non-neurologic, but consequential impact of mutation in this gene. We present a case of a 15-year old female who was admitted and evaluated for failure to thrive. On exam, she had severe speech dysfluency, limited ability to protrude the tongue, and generalized dystonia involving the oromandibular region, right upper and left lower extremity with left foot inversion contracture. The proband and her parents underwent whole genome sequencing. A previously undescribed variant, c.4960 T > C (p.Cys1654Arg), was identified in the KMT2B gene in the proband and mother, and this variant was subsequently confirmed in two maternal cousins, one with failure to thrive. Literature review identified frequent reports of prominent bulbar involvement but failure to thrive is rarely mentioned. Failure to thrive is a common pediatric clinical condition that has consequences for growth and development. In the presence of an abnormal neurologic exam, a search for a specific underlying genetic etiology should be pursued. With this case series, we highlight an unusual potentially treatable cause of failure to thrive, reinforce the importance of precise molecular diagnosis for patients with failure to thrive and an abnormal neurologic exam, and underscore the importance of cascade screening of family members.",
+          "url": "https://www.semanticscholar.org/paper/b3a6dc4271dcb6b5f9c37933b3c8db4c1cc3e215",
+          "isOpenAccess": true
+        },
+        {
+          "id": "d175a5524eea532421a066a696dd3518ce110432",
+          "title": "Atypical presentation of plantar fasciitis secondary to soft-tissue mass infiltration.",
+          "authors": [
+            "A. Ng",
+            "T. Beegle",
+            "A. Rockett"
+          ],
+          "year": 2025,
+          "abstract": "This article describes a patient with plantar fascial pain who presented to the office of one of the authors. Physical examination and the patient's description of the history of symptoms revealed classic signs and symptoms of plantar fasciitis. The patient was treated with numerous conservative modalities, including ultrasound, nonsteroidal anti-inflammatory medications, trigger-point injections, over-the-counter orthoses, and stretching exercises. When the pain was not relieved by these conservative measures, magnetic resonance imaging of the area was performed. Visualization of the insertional area of the plantar fascia revealed a mass inferior to, as well as infiltrated into, the plantar fascia. Surgical excision of the lesion resulted in complete elimination of the patient's pain.",
+          "url": "https://www.semanticscholar.org/paper/d175a5524eea532421a066a696dd3518ce110432",
+          "isOpenAccess": false
+        },
+        {
+          "id": "adf1898e45a25fa10b1db06cce8ff0767602f7a7",
+          "title": "Giant hepatic haemangioma rupture in a patient on direct oral anticoagulant therapy",
+          "authors": [
+            "M. Nguyen",
+            "A. Lim",
+            "E. Jeyarajan",
+            "M. Koh",
+            "A. Ng",
+            "Phillip Townend"
+          ],
+          "year": 2025,
+          "abstract": "Abstract Rupture of a liver haemangioma is extremely rare, with less than 100 cases reported in the literature. This is the first case known to date reporting a rupture occurring with direct oral anticoagulant therapy. A 76-year-old woman presented with acute abdominal pain and syncope in the context of commencing apixaban 4 weeks prior. Abdominal computed tomography and angiography demonstrated a large heterogenous mass in the left liver lobe with contrast blush suggestive of a bleeding tumour. Urgent transcatheter arterial embolization successfully ceased haemorrhage. Due to persistent compressive symptoms, a left lateral hepatectomy was performed. CD34 immunostaining of the tissue revealed variably sized vessels, which was consistent with a ruptured giant hepatic haemangioma. Our case substantiates the limited available literature regarding ruptured haemangiomas. Combined with previous case reports, this report will significantly contribute to our understanding of the risk factors, diagnosis and surgical indications for ruptured hepatic haemangiomas.",
+          "url": "https://www.semanticscholar.org/paper/adf1898e45a25fa10b1db06cce8ff0767602f7a7",
+          "isOpenAccess": true
+        },
+        {
+          "id": "5975c896c5b488fa9e3606ee9a25c66e21863d3a",
+          "title": "Induction therapy for rectal carcinoma.",
+          "authors": [
+            "P. Busse",
+            "A. Ng",
+            "A. Recht"
+          ],
+          "year": 2025,
+          "abstract": "Induction, or preoperative therapy for rectal carcinoma, is a controversial topic which appears to have clinical utility in a number of distinct settings that range from early stage to locally advanced disease. Common to all treatment scenarios is the intent of reducing the likelihood of recurrence in the pelvis following surgery. An additional and evolving role is a reduction in the extent of surgery following a complete or partial clinical response to the induction regimen. While radiation as a single modality can lead to downstaging and, perhaps, a reduction in local recurrence, combined modality with 5-fluorouracil (5-FU) and radiation appears to have a greater therapeutic benefit that may be further enhanced by the administration of leucovorin.",
+          "url": "https://www.semanticscholar.org/paper/5975c896c5b488fa9e3606ee9a25c66e21863d3a",
+          "isOpenAccess": false
+        }
+      ],
+      "styleProfile": {
+        "tone": "Formal, Academic, Objective, Concise",
+        "keywords": [
+          "plantar fasciitis",
+          "hepatectomy",
+          "5-fluorouracil (5-FU)",
+          "leucovorin",
+          "induction therapy",
+          "rectal carcinoma",
+          "locally advanced disease",
+          "downstaging",
+          "combined modality",
+          "KMT2B-related dystonia",
+          "deep brain stimulation",
+          "whole genome sequencing",
+          "variant",
+          "failure to thrive",
+          "hepatic haemangioma",
+          "direct oral anticoagulant therapy",
+          "apixaban",
+          "transcatheter arterial embolization",
+          "CD34 immunostaining",
+          "magnetic resonance imaging",
+          "surgical excision",
+          "nonsteroidal anti-inflammatory medications"
+        ],
+        "sentenceStyle": "Primarily declarative; short to medium length; some complex sentences used for efficiency; Subject-Verb-Object structure is common; avoids overly long or convoluted structures",
+        "complexity": "moderate",
+        "formalityLevel": "academic",
+        "writingPatterns": [
+          "Chronological presentation of case details (common in case reports)",
+          "Descriptive style focusing on factual reporting",
+          "Implicit argumentation where the case study itself serves as evidence",
+          "Concise and information-dense writing",
+          "Use of precise medical terminology",
+          "Cautious phrasing when certainty is lacking"
+        ],
+        "vocabularyLevel": "Sophisticated medical terminology used precisely and accurately; avoids overly obscure or jargon-laden terms; accessible to professionals in the relevant field.",
+        "structuralPreferences": [
+          "Clear and logical structure (introduction, case presentation, discussion/conclusion, or similar)",
+          "Use of headings and subheadings to improve readability (likely in full papers)",
+          "Appropriate use of abbreviations and acronyms within the field",
+          "Emphasis on objective reporting of data and findings"
+        ]
+      },
+      "linguisticFingerprint": null,
+      "originalTexts": [],
+      "paperAnalyses": [
+        {
+          "paperId": "053b1a32320d002b7b77faa4f967721b7c7c141c",
+          "analysis": "The provided abstract excerpt demonstrates a style typical of a concise, clinically-focused medical report, prioritizing clarity and precision over elaborate prose.  Let's analyze its characteristics:\n\n**1. Tone and Formality Level:** The tone is highly formal, objective, and factual.  There's no room for subjective opinion or speculation.  The language is precise and avoids colloquialisms. The clinical presentation is reported in a straightforward, unembellished manner.\n\n**2. Sentence Structure and Complexity:** Sentences are relatively short and declarative.  While some contain multiple clauses (e.g., the opening sentence), complexity is kept to a minimum to ensure easy comprehension.  This prioritizes clarity and readability for a broad medical audience, including clinicians who might quickly scan the abstract. The sentences largely follow a Subject-Verb-Object structure.\n\n**3. Vocabulary Sophistication:** The vocabulary is sophisticated, using precise medical terminology (e.g., \"hyperdense lesion,\" \"haemorrhage,\" \"subfalcine,\" \"uncal,\" \"cerebellar\"). However, it avoids overly obscure or jargon-laden terms.  The words chosen are specific and unambiguous, leaving no room for misinterpretation.\n\n**4. Technical Terminology Usage:** The abstract makes heavy use of technical medical terminology.  This is expected in a medical publication and reflects the specificity needed to accurately convey the clinical findings. The terminology reflects the neurosurgical and genetic aspects of the case.\n\n**5. Argumentation Patterns:**  The abstract excerpt doesn't fully present an argument but lays the groundwork for one.  It uses a descriptive, case-report style.  The opening sentences establish the patient's presentation.  Subsequent sentences describe the key clinical findings (CT scan results).  This is a classic inductive approach— presenting data to suggest a specific condition or requiring further investigation. The complete abstract would likely then move to the diagnosis and implications.\n\n**6. Overall Writing Characteristics:** The writing is concise, direct, and data-driven.  There's a strong emphasis on precision and accuracy.  The style is efficient and avoids unnecessary embellishment or stylistic flourishes.  It's optimized for conveying crucial information quickly and effectively to a specialized audience.\n\n\n**Emulating this Style:** To emulate this style:\n\n* **Prioritize clarity and conciseness:**  Every word should serve a purpose. Avoid redundancy and wordiness.\n* **Use precise and unambiguous language:** Choose words carefully to accurately convey meaning.\n* **Employ technical terminology appropriately:** Use specialized terms when necessary, but define them if the audience may not be familiar.\n* **Focus on objective reporting:** Avoid subjective opinions or interpretations. Present facts and data clearly.\n* **Use short, declarative sentences:**  While some complex sentences are acceptable, prioritize clear and concise sentence structure.\n* **Adopt a formal and objective tone:** Maintain a professional and detached demeanor throughout the writing.\n* **Structure the text logically and systematically:**  Organize information in a clear and easily digestible manner.\n\n\nThis style is particularly effective for medical case reports, abstracts of scientific papers, and other communications aimed at conveying specific data within a specialized field.  The emphasis on precision over style makes it highly suitable for the dissemination of scientific information.\n"
+        },
+        {
+          "paperId": "b3a6dc4271dcb6b5f9c37933b3c8db4c1cc3e215",
+          "analysis": "This abstract exhibits a concise and highly formal academic writing style, typical of a case report in a medical journal.  Let's break down its characteristics:\n\n**1. Tone and Formality Level:** The tone is objective, factual, and highly formal.  There's no room for subjective opinions or informal language. The language is precise and avoids colloquialisms or figurative language.\n\n**2. Sentence Structure and Complexity:**  The sentences are predominantly relatively short and declarative, although some contain embedded clauses for conciseness.  Complexity is achieved through the use of compound and complex sentences which efficiently convey information rather than through overly long or convoluted structures. The focus is on clarity and directness.\n\n**3. Vocabulary Sophistication:** The vocabulary is sophisticated, employing precise medical terminology (see point 4). However, it avoids unnecessarily obscure terms, maintaining accessibility within the medical field.  The language is formal and avoids slang or informal contractions.\n\n**4. Technical Terminology Usage:** The abstract is rich in technical terminology specific to genetics and neurology: *KMT2B-related dystonia*, *deep brain stimulation*, *bulbar involvement*, *orolingual dysfunction*, *whole genome sequencing*, *variant*, *c.4960 T > C (p.Cys1654Arg)*, *failure to thrive*, *oromandibular region*, *neurologic exam*, *cascade screening*.  These terms are essential for communicating the findings clearly to a specialist audience.  The use of precise terminology is key to its accuracy and reliability within its field.\n\n**5. Argumentation Patterns:** The argumentation follows a clear pattern:\n    * **Introduction:** Establishes the context of KMT2B-related dystonia and a gap in existing knowledge (failure to thrive).\n    * **Case Presentation:** Presents a detailed case of a patient with the condition and an associated genetic mutation.\n    * **Discussion/Conclusion:**  Highlights the significance of the findings, emphasizing the importance of considering this rare cause of failure to thrive, precise diagnosis, and family screening.  The argument is implicitly supported by the presented case study and the literature review.\n\n**6. Overall Writing Characteristics:**  The abstract is highly concise and information-dense. It prioritizes clarity and precision, using direct language to convey essential information efficiently. There is a clear structure (introduction, case presentation, conclusion), facilitating easy comprehension.  The writing style demonstrates a strong understanding of the target audience (medical professionals) and adheres to the conventions of medical case report writing.\n\n\n**Emulating the Author's Style:**\n\nTo emulate this style, you should:\n\n* **Prioritize Clarity and Precision:**  Use direct, unambiguous language. Avoid flowery language or subjective opinions.\n* **Employ Precise Medical Terminology:**  Use accurate and specific terminology relevant to the field. Define any less common terms if necessary.\n* **Use Short, Declarative Sentences Primarily:** While complex sentences are acceptable for efficiency, keep them relatively short and avoid overly convoluted structures.\n* **Maintain a Formal Tone:** Avoid contractions, slang, and informal language.  Keep the tone objective and factual.\n* **Structure Your Writing Logically:** Follow a clear structure (introduction, methods, results, discussion/conclusion) appropriate to the type of paper.\n* **Conciseness is Key:** Avoid unnecessary words or phrases.  Get straight to the point.\n* **Use Active Voice:** Active voice tends to be more direct and easier to read than passive voice in scientific writing.\n* **Cite Relevant Literature:** Support your claims with references to existing research.\n\n\nBy following these guidelines, you can achieve a writing style similar to that demonstrated in the provided abstract, suitable for academic publications in the medical or life sciences fields.  Remember, however, that mimicking a style perfectly might not be appropriate for every context; adaptation to the specific journal and target audience is crucial.\n"
+        },
+        {
+          "paperId": "d175a5524eea532421a066a696dd3518ce110432",
+          "analysis": "This abstract exhibits a clear, concise, and straightforward writing style typical of a case report in a medical journal. Let's analyze its characteristics:\n\n**1. Tone and Formality Level:** The tone is highly formal and objective, characteristic of academic medical writing.  There's a complete absence of subjective opinions or informal language. The focus is on factual reporting of the case.\n\n**2. Sentence Structure and Complexity:** The sentences are relatively short and simple, prioritizing clarity and directness.  Most sentences are declarative, following a subject-verb-object structure.  Complex sentence structures are avoided, minimizing potential for ambiguity.  This contributes to the easily digestible nature of the abstract.\n\n**3. Vocabulary Sophistication:** The vocabulary is precise and professional, but not overly complex.  It uses medical terminology appropriately, but avoids jargon that might be inaccessible to a broader readership familiar with basic medical concepts.  Words are chosen for their accuracy and clarity rather than for impressiveness.\n\n**4. Technical Terminology Usage:**  The abstract uses specific medical terminology (\"plantar fasciitis,\" \"nonsteroidal anti-inflammatory medications,\" \"magnetic resonance imaging,\" \"surgical excision\") accurately and appropriately.  The terminology is balanced; it's sufficient for conveying the medical information without overwhelming a reader with overly specialized terms.\n\n**5. Argumentation Patterns:** The abstract follows a descriptive, chronological pattern. It presents the case in a straightforward manner, detailing the patient's symptoms, diagnostic procedures, treatment, and outcome.  There's no explicit argumentation; the implicit argument is the unusual presentation of plantar fasciitis and the successful resolution through surgical intervention.  The case itself is the evidence.\n\n**6. Overall Writing Characteristics:** The writing is characterized by:\n\n* **Conciseness:**  The abstract efficiently conveys the essential information without unnecessary detail.\n* **Objectivity:**  The presentation of facts is neutral and unbiased.\n* **Clarity:**  The language is unambiguous and easy to understand.\n* **Precision:**  Medical terms are used accurately to ensure the information's correctness.\n* **Chronological order:**  The case presentation unfolds logically through time.\n\n\n**Emulating this Author's Style:** To emulate this style, writers should focus on:\n\n* **Prioritizing clarity over complexity:** Use short, simple sentences where possible.  Avoid overly complex sentence structures that might confuse the reader.\n* **Employing precise and accurate medical terminology:** Use appropriate technical terms but define or explain them if necessary for a wider audience. Avoid jargon.\n* **Maintaining a formal and objective tone:** Avoid colloquialisms, slang, and subjective opinions.  Focus on presenting facts in a neutral manner.\n* **Using a concise and direct writing style:**  Get straight to the point and avoid unnecessary embellishments.\n* **Organizing information logically:**  Present information chronologically or in a clear, easily-followed structure.  A simple, descriptive structure often works best for case reports.\n* **Proofreading meticulously:** Ensure accuracy in medical terminology and grammar.\n\nBy adhering to these principles, writers can produce medical case reports and abstracts that are clear, concise, and easily understood by a professional audience.\n"
+        },
+        {
+          "paperId": "adf1898e45a25fa10b1db06cce8ff0767602f7a7",
+          "analysis": "This abstract exhibits a concise, factual, and highly formal academic writing style typical of medical case reports. Let's analyze its characteristics:\n\n**1. Tone and Formality Level:** The tone is extremely formal, objective, and devoid of any subjective opinions or interpretations.  The language is precise and avoids colloquialisms or informal expressions.  The focus is purely on presenting the facts of the case and its implications for medical knowledge.\n\n**2. Sentence Structure and Complexity:** The sentences are predominantly short to medium length, prioritizing clarity and directness.  While some sentences are more complex (e.g., the sentence describing the patient's presentation), they maintain grammatical precision and avoid overly convoluted structures. The overall structure favors a chronological reporting of events.\n\n**3. Vocabulary Sophistication:** The vocabulary is sophisticated, employing precise medical terminology (discussed below).  However, the word choices are not unnecessarily complex; the language remains accessible to a medical professional audience while maintaining a high level of accuracy.\n\n**4. Technical Terminology Usage:** The abstract heavily utilizes precise medical terminology, including \"hepatic haemangioma,\" \"direct oral anticoagulant therapy,\" \"apixaban,\" \"transcatheter arterial embolization,\" \"hepatectomy,\" and \"CD34 immunostaining.\"  These terms are essential for accurate communication within the medical field and demonstrate expertise.  No explanation of these terms is provided, reflecting an assumption of the reader's medical background.\n\n**5. Argumentation Patterns:** The argumentation is implicit but clear. The authors present a rare case (ruptured hepatic haemangioma on anticoagulant therapy), highlight its unique aspects (first reported case with this specific drug), describe the diagnosis and treatment, and then conclude with the contribution to the existing medical literature. The argument is built upon the evidence of the case study itself.  It's deductive in the sense that the case leads to a conclusion about the understanding of the condition.\n\n**6. Overall Writing Characteristics:** The writing is highly concise and efficient.  Every sentence serves a purpose in conveying essential information.  There's a clear structure: introduction of the rarity, case presentation, diagnostic and therapeutic steps, and concluding remarks on the contribution to medical knowledge.  The style emphasizes objectivity, accuracy, and brevity.\n\n\n**Emulating the Author's Style:** To emulate this style, one should focus on the following:\n\n* **Prioritize precision and accuracy:** Every word should be carefully chosen for its exact meaning. Avoid ambiguity or vagueness.\n* **Use concise and clear sentences:** Favor shorter sentences over long, complex ones, unless absolutely necessary for the clarity of a particularly complex idea.\n* **Employ precise medical terminology:**  Use the correct technical terms relevant to the subject matter. Assume a knowledgeable audience within the relevant medical specialty.\n* **Maintain an objective and formal tone:** Avoid personal opinions, subjective interpretations, or colloquial language.\n* **Follow a clear structure:** Organize information logically, typically chronologically in case reports, with a clear introduction, body, and conclusion.\n* **Focus on factual reporting:** Present findings clearly and concisely, emphasizing data and evidence.\n* **Use passive voice where appropriate:** The passive voice is frequently used in medical writing to emphasize the actions performed rather than the actor.  For example, \"A hepatectomy was performed\" instead of \"The surgeons performed a hepatectomy.\"  While overuse should be avoided, it is a characteristic of this style.\n\n\nBy adhering to these principles, one can effectively mimic the clear, concise, and highly formal style of this medical case report abstract.  Remember that this style is specific to the genre; other academic writing genres may require different stylistic choices.\n"
+        },
+        {
+          "paperId": "5975c896c5b488fa9e3606ee9a25c66e21863d3a",
+          "analysis": "## Analysis of the Abstract's Writing Style\n\nThis abstract exhibits a writing style characteristic of many medical/oncological publications: concise, formal, and focused on conveying factual information with a degree of measured optimism regarding treatment efficacy.\n\n**1. Tone and Formality Level:** The tone is highly formal and objective.  There's a noticeable absence of subjective opinions or emotional language.  The authors present information as established fact or probable clinical observation, using cautious phrasing (\"appears to have,\" \"may be further enhanced\") where certainty is lacking.  The overall effect is authoritative yet measured.\n\n\n**2. Sentence Structure and Complexity:**  The sentences are primarily declarative and relatively complex. They often employ subordinate clauses and participial phrases to convey multiple pieces of information efficiently.  For example, \"Common to all treatment scenarios is the intent of reducing the likelihood of recurrence in the pelvis following surgery\" is a complex sentence effectively summarizing a key concept. The length of sentences varies, but none are excessively long or convoluted, maintaining readability.\n\n\n**3. Vocabulary Sophistication:** The vocabulary is sophisticated and precise, reflecting the technical nature of the subject matter.  Terms like \"induction therapy,\" \"locally advanced disease,\" \"downstaging,\" and \"combined modality\" are used without extensive explanation, assuming a reader with a suitable medical background.  However, the language remains accessible to those familiar with basic medical terminology.\n\n\n**4. Technical Terminology Usage:** The abstract uses a significant amount of specialized medical terminology (\"rectal carcinoma,\" \"5-fluorouracil (5-FU),\" \"leucovorin,\" \"induction regimen,\" \"pelvis\").  Abbreviations (5-FU) are used appropriately, assuming familiarity with common medical shorthand. The use of terminology is precise and accurate, demonstrating the authors' expertise.\n\n\n**5. Argumentation Patterns:** The argumentation is primarily descriptive and implicitly persuasive. The abstract establishes the context (controversial nature of induction therapy), outlines its potential benefits (reducing recurrence, enabling less extensive surgery), and then presents evidence for the superior efficacy of combined modality therapy (radiation + 5-FU + leucovorin) over radiation alone. The structure implicitly argues for the value of the combined modality approach without explicitly stating a strong conclusion.\n\n\n**6. Overall Writing Characteristics:** The writing is concise, clear, and efficient.  It prioritizes conveying factual information accurately and systematically. The style is direct, avoiding unnecessary embellishment or stylistic flourishes.  The authors demonstrate expertise through their precise use of terminology and their implicit but clear argument for a particular treatment approach.\n\n\n**Emulating the Author's Style:** To emulate this style, one should focus on the following:\n\n* **Prioritize clarity and precision:** Use precise language, avoiding ambiguity or vague phrasing.\n* **Employ complex sentences judiciously:**  Use subordinate clauses and participial phrases to convey multiple related ideas efficiently, but avoid overly long or convoluted sentences.\n* **Use appropriate technical terminology:**  Assume a reader familiar with the relevant field's terminology. Define uncommon or crucial terms where necessary.\n* **Maintain objectivity and formality:** Avoid emotional language, subjective opinions, or colloquialisms.  Present information factually and avoid overly strong claims.\n* **Structure arguments logically:** Present information systematically, building a clear and concise argument based on evidence.\n* **Use concise and efficient language:** Avoid unnecessary words or phrases. Focus on conveying the most critical information as directly as possible.\n* **Use abbreviations sparingly but appropriately:** Employ common medical abbreviations only when the audience's familiarity is certain.\n\n\nBy following these guidelines, one can effectively adopt a writing style similar to that demonstrated in the provided abstract, suitable for academic publications in the medical field.\n"
+        }
+      ],
+      "isPublic": false,
+      "userId": null,
+      "errorMessage": null
+    },
+    {
+      "id": "688bc0b00e8a70f34b453340",
+      "name": "h",
+      "type": "custom",
+      "status": "ready",
+      "sourceCount": 1,
+      "createdAt": "2025-07-31T19:14:56.282Z",
+      "updatedAt": "2025-07-31T19:15:05.857Z",
+      "sourcePapers": [
+        {
+          "id": "7772eed8b2622bcf2b934a60e48faf981dc2baf2",
+          "title": "Spectrogram-Driven Heart Sound Classification using YOLOv8 for Mobile Health Monitoring",
+          "authors": [
+            "Sania Verma",
+            "Hardik Chadda"
+          ],
+          "year": 2025,
+          "abstract": "This paper presents a novel approach using the classification of abnormal or normal phonocardiogram (PCG) recordings by transforming them to spectrograms and applying YOLOv8 model for real-time classification. Unlike traditional models that work directly with raw audio or time-series data, our approach adopts the use of spectrograms to exploit the strengths of deep learning-based classifiers resulting in better accuracy. The model was trained on the PhysioNet/CinC 2016 dataset with a remarkable accuracy of 94.5%, F1-score of 0.95, recall of 0.97, precision of 0.95, and MCC of 0.83. Compared to traditional models such as LSTM or ResNet-18, YOLOv8 had a clear advantage in handling class imbalance within the dataset given. Although the LSTM models give promising results, they have larger computational overheads, which makes them unsuitable for real-time applications. Future work will investigate the optimization of YOLOv8 for deployment on microcontroller-based systems to improve efficiency within mobile health applications by minimizing inference time and resource usage. From our results, we believe that this method holds great promise to be implemented towards improving portable health diagnostics as a more accurate and efficient means of cardiovascular monitoring.",
+          "url": "https://www.semanticscholar.org/paper/7772eed8b2622bcf2b934a60e48faf981dc2baf2",
+          "isOpenAccess": false
+        }
+      ],
+      "styleProfile": {
+        "tone": "Formal, objective, and concise.  Maintains a professional, scientific demeanor while allowing for a limited degree of cautious enthusiasm regarding results.",
+        "keywords": 
+        [
+          "accuracy",
+          "F1-score",
+          "precision",
+          "recall",
+          "MCC",
+          "algorithm",
+          "model",
+          "method",
+          "dataset",
+          "results",
+          "performance",
+          "evaluation",
+          "comparison",
+          "novel",
+          "approach",
+          "implementation",
+          "spectrogram",
+          "feature extraction",
+          "classification",
+          "deep learning",
+          "machine learning",
+          "LSTM",
+          "CNN",
+          "RNN",
+          "YOLO",
+          "ResNet"
+        ],
+        "sentenceStyle": "Predominantly concise and declarative.  Complex sentences are used sparingly and are grammatically clear.  Focus is on efficient information conveyance.",
+        "complexity": "moderate",
+        "formalityLevel": "academic",
+        "writingPatterns": [
+          "Introduction of a novel approach or improvement",
+          "Presentation of quantitative results with supporting metrics",
+          "Comparison with existing state-of-the-art methods",
+          "Discussion of limitations and future work",
+          "Clear problem statement and justification"
+        ],
+        "vocabularyLevel": "Technically sophisticated but avoids overly obscure terminology.  Precise and unambiguous language is used, ensuring accessibility to a broad audience within the field. Acronyms are used consistently after introduction.",
+        "structuralPreferences": [
+          "IMRaD structure (Introduction, Methods, Results, and Discussion) or a variation thereof",
+          "Emphasis on quantitative results and data visualization in the results section",
+          "Clear and concise methodology description",
+          "Well-defined conclusion summarizing findings and implications",
+          "Concise abstract highlighting key contributions"
+        ]
+      },
+      "linguisticFingerprint": null,
+      "originalTexts": [],
+      "paperAnalyses": [
+        {
+          "paperId": "7772eed8b2622bcf2b934a60e48faf981dc2baf2",
+          "analysis": "The abstract exhibits a style typical of many computer science and engineering publications, prioritizing clarity, conciseness, and a direct presentation of results.  Let's analyze its characteristics:\n\n\n1. **Tone and Formality Level:** The tone is formal and objective, avoiding colloquialisms or subjective opinions.  It maintains a professional, scientific demeanor throughout.  Phrases like \"a novel approach,\" \"remarkable accuracy,\" and \"clear advantage\" inject a mild degree of enthusiasm, but it remains within the bounds of academic propriety.\n\n2. **Sentence Structure and Complexity:** The sentences are predominantly concise and declarative, focusing on conveying information efficiently.  While some sentences are more complex (e.g., the sentence explaining the approach's novelty), they are grammatically clear and easy to follow.  The overall structure prioritizes directness and avoids overly long or convoluted sentences.\n\n3. **Vocabulary Sophistication:** The vocabulary is technically sophisticated, utilizing terms like \"phonocardiogram (PCG),\" \"spectrograms,\" \"YOLOv8,\" \"LSTM,\" \"ResNet-18,\" \"F1-score,\" \"recall,\" \"precision,\" \"MCC,\" and \"class imbalance.\"  However, the authors avoid overly obscure terminology, ensuring accessibility to a broad audience within the field.  The language remains precise and unambiguous.\n\n4. **Technical Terminology Usage:**  Technical terminology is used correctly and consistently, demonstrating a firm grasp of the subject matter.  Acronyms (e.g., PCG, LSTM, ResNet-18, MCC) are introduced and consistently used, further contributing to efficiency.  The definitions are implied through context or are explicitly stated (e.g., phonocardiogram).\n\n5. **Argumentation Patterns:** The argumentation follows a clear structure:\n    * **Introduction of the novel approach:**  The core idea is presented early and concisely.\n    * **Results presentation:**  Quantitative results (accuracy, F1-score, etc.) are prominently featured to support the claim of effectiveness.\n    * **Comparison with existing methods:**  The proposed method is explicitly compared to established alternatives (LSTM, ResNet-18), highlighting its advantages.\n    * **Future work and implications:** The abstract concludes by outlining future research directions and emphasizing the potential impact of the work.  This follows a common pattern of highlighting potential broader applications.\n\n6. **Overall Writing Characteristics:** The writing style is concise, direct, and results-oriented.  Emphasis is placed on the technical aspects of the research and the quantitative evidence supporting the claims. The abstract effectively communicates the key contributions and findings of the paper within the space constraints of an abstract.\n\n\n**Emulating the Author's Style:** To emulate this style:\n\n* **Prioritize clarity and conciseness:**  Use short, declarative sentences and avoid unnecessary jargon.\n* **Employ precise technical terminology:**  Use the correct and consistent technical terms relevant to your field.\n* **Focus on results and quantitative data:**  Highlight key findings and support claims with numerical evidence.\n* **Structure your writing logically:**  Follow a clear pattern of introduction, methods, results, and conclusions.\n* **Maintain an objective and formal tone:** Avoid subjective opinions or colloquialisms.\n* **Use a strong and active voice:**  This conveys confidence and directness.\n* **Compare and contrast your work with existing research:**  Show how your work is novel and improves upon existing methods.\n* **Conclude by suggesting future work and implications:**  Highlight the potential impact of your work.\n\n\nBy adhering to these guidelines, you can effectively emulate the writing style demonstrated in the provided abstract and craft clear, concise, and impactful technical writing for academic publications.\n"
+        }
+      ],
+      "isPublic": false,
+      "userId": null,
+      "errorMessage": null
+    },
+    {
+      "id": "688bb725079f9017fd9c0e10",
+      "name": "nmmn",
+      "type": "custom",
+      "status": "ready",
+      "sourceCount": 2,
+      "createdAt": "2025-07-31T18:34:13.274Z",
+      "updatedAt": "2025-07-31T18:34:23.489Z",
+      "sourcePapers": [
+        {
+          "id": "2029349c55c1dba3493c5b3bd25152f18ba21ae2",
+          "title": "Augmented Language Models: a Survey",
+          "authors": [
+            "G. Mialon",
+            "Roberto Dessì",
+            "M. Lomeli",
+            "Christoforos Nalmpantis",
+            "Ramakanth Pasunuru",
+            "R. Raileanu",
+            "Baptiste Rozière",
+            "Timo Schick",
+            "Jane Dwivedi-Yu",
+            "Asli Celikyilmaz",
+            "Edouard Grave",
+            "Yann LeCun",
+            "Thomas Scialom"
+          ],
+          "year": 2025,
+          "abstract": "This survey reviews works in which language models (LMs) are augmented with reasoning skills and the ability to use tools. The former is defined as decomposing a potentially complex task into simpler subtasks while the latter consists in calling external modules such as a code interpreter. LMs can leverage these augmentations separately or in combination via heuristics, or learn to do so from demonstrations. While adhering to a standard missing tokens prediction objective, such augmented LMs can use various, possibly non-parametric external modules to expand their context processing ability, thus departing from the pure language modeling paradigm. We therefore refer to them as Augmented Language Models (ALMs). The missing token objective allows ALMs to learn to reason, use tools, and even act, while still performing standard natural language tasks and even outperforming most regular LMs on several benchmarks. In this work, after reviewing current advance in ALMs, we conclude that this new research direction has the potential to address common limitations of traditional LMs such as interpretability, consistency, and scalability issues.",
+          "url": "https://www.semanticscholar.org/paper/2029349c55c1dba3493c5b3bd25152f18ba21ae2",
+          "isOpenAccess": false
+        },
+        {
+          "id": "ee57e4d7a125f4ca8916284a857c3760d7d378d3",
+          "title": "Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture",
+          "authors": [
+            "Mahmoud Assran",
+            "Quentin Duval",
+            "Ishan Misra",
+            "Piotr Bojanowski",
+            "Pascal Vincent",
+            "Michael G. Rabbat",
+            "Yann LeCun",
+            "Nicolas Ballas"
+          ],
+          "year": 2025,
+          "abstract": "This paper demonstrates an approach for learning highly semantic image representations without relying on hand-crafted data-augmentations. We introduce the Image-based Joint-Embedding Predictive Architecture (I-JEPA), a non-generative approach for self-supervised learning from images. The idea behind I-JEPA is simple: from a single context block, predict the representations of various target blocks in the same image. A core design choice to guide I-JEPA towards producing semantic representations is the masking strategy; specifically, it is crucial to (a) sample target blocks with sufficiently large scale (semantic), and to (b) use a sufficiently informative (spatially distributed) context block. Empirically, when combined with Vision Transformers, we find I-JEPA to be highly scalable. For instance, we train a ViT-Huge/14 on ImageNet using 16 A100 GPUs in under 72 hours to achieve strong downstream performance across a wide range of tasks, from linear classification to object counting and depth prediction.",
+          "url": "https://www.semanticscholar.org/paper/ee57e4d7a125f4ca8916284a857c3760d7d378d3",
+          "isOpenAccess": true
+        }
+      ],
+      "styleProfile": {
+        "tone": "Formal, Academic, Objective, Impersonal",
+        "keywords": [
+          "language models",
+          "semantic representations",
+          "architecture",
+          "performance",
+          "algorithm",
+          "model",
+          "methodology",
+          "data",
+          "training",
+          "results",
+          "predictive",
+          "representation",
+          "heuristics",
+          "interpretability",
+          "augmentation"
+        ],
+        "sentenceStyle": "Predominantly complex sentences with a mix of simple and declarative sentences.  Well-structured with subordinate clauses and participial phrases, but avoids overly long or convoluted constructions.  High variance in sentence length, maintaining readability.",
+        "complexity": "complex",
+        "formalityLevel": "academic",
+        "writingPatterns": [
+          "Deductive and explanatory argumentation",
+          "Clear problem statement followed by proposed solution and supporting evidence",
+          "Emphasis on precision and clarity",
+          "Concise and impactful writing; every sentence contributes to the main argument",
+          "Structured argumentation: introduction, body, conclusion (explicit or implicit)"
+        ],
+        "vocabularyLevel": "Sophisticated but accessible to a reader with a foundational understanding of the specific field (NLP or Computer Vision).  Technical terminology is used precisely and accurately, avoiding unnecessary jargon.",
+        "structuralPreferences": [
+          "Well-organized paragraphs and sections",
+          "Clear introduction defining the subject and scope",
+          "Systematic explanation of methodology and results",
+          "Logical flow of argumentation",
+          "Concise and impactful conclusion summarizing key findings and contributions",
+          "Use of acronyms (defined upon first use)"
+        ]
+      },
+      "linguisticFingerprint": null,
+      "originalTexts": [],
+      "paperAnalyses": [
+        {
+          "paperId": "2029349c55c1dba3493c5b3bd25152f18ba21ae2",
+          "analysis": "This abstract demonstrates a clear, concise, and technically precise writing style typical of a high-quality academic survey paper. Let's analyze its characteristics:\n\n**1. Tone and Formality Level:** The tone is highly formal and objective.  There's no colloquial language, personal opinions, or subjective judgments. The language is precise and avoids ambiguity.  The authors maintain a detached, scholarly perspective.\n\n**2. Sentence Structure and Complexity:** The sentences are predominantly complex, employing various structures including subordinate clauses and participial phrases. This reflects the sophisticated nature of the subject matter.  However, the complexity is managed well; sentences are not overly long or convoluted, maintaining readability.  There is a good balance between short, declarative sentences and longer, more descriptive sentences.\n\n**3. Vocabulary Sophistication:** The vocabulary is sophisticated, reflecting the technical nature of the field. Terms like \"heuristics,\" \"non-parametric,\" \"decomposing,\" and \"interpretability\" are used naturally. However, the language remains accessible to a reader with a foundational understanding of natural language processing (NLP).  The authors avoid jargon that might be inaccessible to a broader audience within the field.\n\n**4. Technical Terminology Usage:** The abstract effectively utilizes technical terminology specific to the field of NLP, such as \"language models (LMs),\" \"missing tokens prediction,\" and \"code interpreter.\"  Terms are introduced clearly and contextually, ensuring understanding for a specialized audience.  The acronym ALMs (Augmented Language Models) is well-defined.\n\n**5. Argumentation Patterns:** The argumentation is deductive and explanatory.  The abstract begins by defining the subject (augmented language models), explains their key features (reasoning, tool use), and then outlines their advantages over traditional LMs.  The conclusion summarizes the potential impact of this research direction.  The argument is presented logically and systematically.\n\n**6. Overall Writing Characteristics:**  The abstract is highly structured and well-organized.  It effectively summarizes the paper's scope, methodology, and key findings.  Clarity and precision are paramount, ensuring the reader quickly grasps the paper's core contributions.  The style is efficient and avoids unnecessary words or phrases.\n\n\n**Emulating the Author's Style:** To emulate this writing style, one should focus on:\n\n* **Precision and Clarity:** Every word should serve a purpose.  Avoid vagueness or ambiguity.\n* **Formal Tone:** Maintain a detached, objective voice.  Avoid colloquialisms or subjective language.\n* **Structured Argumentation:** Present your argument logically and systematically, with a clear introduction, body, and conclusion.\n* **Balanced Sentence Structure:** Use a mix of simple and complex sentences to maintain readability and rhythm.\n* **Appropriate Technical Terminology:** Use precise and relevant technical terms, defining them clearly when necessary.  Avoid unnecessary jargon.\n* **Concise Language:**  Be efficient in your word choice.  Avoid redundancy and unnecessary details.\n* **Strong Verbs and Precise Nouns:** Opt for strong, active verbs and precise nouns to convey your ideas accurately and effectively.\n\nBy consistently applying these principles, you can cultivate a writing style similar to that demonstrated in this abstract, suitable for communicating complex technical information in a clear and compelling manner within the academic community.\n"
+        },
+        {
+          "paperId": "ee57e4d7a125f4ca8916284a857c3760d7d378d3",
+          "analysis": "This abstract exhibits a clear and concise academic writing style, typical of top-tier computer science publications. Let's analyze its characteristics:\n\n\n1. **Tone and Formality Level:** The tone is highly formal and objective.  There's no use of informal language, subjective opinions, or personal anecdotes. The language maintains a consistently professional and impersonal demeanor.\n\n2. **Sentence Structure and Complexity:** Sentences are generally well-structured and grammatically correct.  While some sentences are relatively complex, involving multiple clauses (e.g., the sentence explaining the masking strategy), they remain clear and easy to follow. The complexity is strategically used to convey nuanced information efficiently.  There's a good balance between short, declarative sentences and slightly longer, more descriptive ones, avoiding overly long and convoluted constructions.\n\n3. **Vocabulary Sophistication:** The vocabulary is sophisticated but appropriate for the field. Terms like \"semantic representations,\" \"data augmentations,\" \"non-generative approach,\" \"Vision Transformers,\" and \"downstream performance\" are used precisely and accurately, demonstrating a strong command of the technical terminology.  However, the authors avoid overly obscure or jargon-heavy language, ensuring accessibility to a broader audience within the field.\n\n4. **Technical Terminology Usage:** The abstract makes extensive use of technical terminology specific to computer vision and machine learning.  The terms are used correctly and are clearly relevant to the subject matter.  Abbreviations like \"I-JEPA\" and \"ViT\" are introduced and used consistently, streamlining the presentation.  However, the authors don't overload the abstract with highly specialized terms inaccessible to a moderately knowledgeable reader in the field.\n\n5. **Argumentation Patterns:** The abstract follows a clear argumentative structure:\n    * **Problem statement (implicit):** The need for efficient self-supervised learning from images without manual data augmentation.\n    * **Proposed solution:** Introduction of I-JEPA, a novel architecture.\n    * **Mechanism/design choices:** Explanation of the crucial masking strategy and its impact on semantic representation.\n    * **Empirical evidence:**  Scalability and strong downstream performance demonstrated with quantitative results (training time and hardware resources).\n    * **Conclusion (implicit):** The success of I-JEPA in achieving high-quality image representations.\n\nThe argument is presented concisely and logically, focusing on the key contributions and supporting evidence.\n\n6. **Overall Writing Characteristics:** The writing is precise, efficient, and impactful.  Every sentence contributes to a clear and well-defined narrative.  The abstract is highly focused, avoiding unnecessary details or digressions.  It effectively communicates the core contributions of the paper in a limited space, successfully piquing the reader's interest.\n\n\n**To emulate this style:**\n\n* **Prioritize clarity and precision:**  Each sentence should convey a specific piece of information without ambiguity.\n* **Use sophisticated but accessible language:**  Employ relevant technical terms but avoid overly specialized jargon unless essential.\n* **Structure your writing logically:**  Follow a clear argumentative structure with a strong introduction, supporting evidence, and (implicit or explicit) conclusion.\n* **Use a balance of sentence lengths and complexity:** Avoid overly simplistic or excessively convoluted sentences.\n* **Be concise and impactful:**  Focus on conveying the most important information efficiently.\n* **Maintain a formal and objective tone:** Avoid personal opinions or informal language.\n* **Use strong verbs and precise nouns:** Choose words that accurately reflect the meaning and avoid vague or weak language.\n* **Carefully proofread and edit:** Ensure grammatical accuracy and clarity before submission.\n\n\nBy adhering to these principles, one can effectively emulate the clear, concise, and impactful writing style showcased in this academic paper abstract.\n"
+        }
+      ],
+      "isPublic": false,
+      "userId": null,
+      "errorMessage": null
+    }
+  ],
+  "usage": {
+    "description": "Use these personas with text generation APIs",
+    "apiEndpoint": "/api/generate",
+    "parameters": {
+      "prompt": "Your text prompt",
+      "selectedPersona": "Use the persona ID from this JSON",
+      "useWritingStyle": true,
+      "language": "Target language (optional)"
+    },
+    "example": {
+      "prompt": "Write a paragraph about artificial intelligence",
+      "selectedPersona": "persona_id_here",
+      "useWritingStyle": true
+    }
+  },
+  "academicCategories": {
+    "theoretical": {
+      "name": "Theoretical/Conceptual",
+      "description": "Focus on theoretical frameworks and abstract reasoning",
+      "characteristics": [
+        "framework",
+        "model",
+        "theory",
+        "concept",
+        "paradigm"
+      ]
+    },
+    "empirical": {
+      "name": "Empirical/Experimental",
+      "description": "Original research with data collection and analysis",
+      "characteristics": [
+        "experiment",
+        "data",
+        "statistical",
+        "methodology",
+        "results"
+      ]
+    },
+    "review": {
+      "name": "Literature Review/Survey",
+      "description": "Comprehensive reviews of existing literature",
+      "characteristics": [
+        "review",
+        "survey",
+        "literature",
+        "systematic",
+        "meta-analysis"
+      ]
+    },
+    "caseStudy": {
+      "name": "Case Study",
+      "description": "In-depth analysis of specific cases or applications",
+      "characteristics": [
+        "case study",
+        "application",
+        "implementation",
+        "practical"
+      ]
+    },
+    "technical": {
+      "name": "Technical/Engineering",
+      "description": "Technical solutions, algorithms, and engineering approaches",
+      "characteristics": [
+        "algorithm",
+        "system",
+        "implementation",
+        "technical",
+        "optimization"
+      ]
+    },
+    "interdisciplinary": {
+      "name": "Interdisciplinary",
+      "description": "Bridge multiple fields and disciplines",
+      "characteristics": [
+        "interdisciplinary",
+        "multidisciplinary",
+        "integration",
+        "hybrid"
+      ]
+    }
+  }
+}

@@ -1,234 +1,214 @@
-# �️ Kalam AI - Advanced AI Content Creation Platform
+# 🤖 Kalam AI - Advanced Text Generation & Humanization Platform
 
-![Kalam AI Logo](public/kalam-ai-logo.svg)
+A sophisticated AI-powered text generation and humanization platform built with Next.js 15, TypeScript, and multiple AI providers including Google Gemini and OpenRouter.
 
-A next-generation AI-powered content creation platform that combines traditional writing wisdom with cutting-edge artificial intelligence. **Kalam** (قلم) means "pen" in Arabic/Urdu, symbolizing the timeless art of writing enhanced by modern AI.
+![Kalam AI](https://img.shields.io/badge/Kalam-AI-blue?style=for-the-badge&logo=openai)
+![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwind-css)
 
-## ✨ Key Features
+## ✨ Features
 
-### 🎯 **Core AI Generation**
-- **Google Gemini Integration**: Powered by Gemini 1.5 Flash for high-quality content
-- **Personal Writing Style Learning**: Upload your writing samples and AI adapts to your voice
-- **Multi-language Support**: Generate content in any language with cultural context
-- **Real-time Generation**: Fast, responsive AI text generation
+### 🎯 Core Functionality
+- **AI Text Generation** - Powered by Google Gemini API
+- **Advanced Text Humanization** - Transform AI text into natural, human-like content
+- **Dual Chat System** - Google Gemini + OpenRouter alternative providers
+- **AI Persona Management** - Create and manage writing style personas
+- **Linguistic Analysis** - 5-dimensional style analysis and fingerprinting
+- **Multi-language Support** - Generate content in multiple languages
 
-### 🌍 **Advanced Cultural Adaptation**
-- **Hinglish Support**: Native support for Hindi-English code-mixing
-- **Regional Language Context**: Understands cultural nuances and local references
-- **Audience Targeting**: Tailor content for specific demographic groups
-- **Cultural Sensitivity**: AI respects local customs and communication styles
+### 🛠️ Technical Features
+- **Next.js 15** with App Router and TypeScript
+- **Real-time Chat** with conversation history
+- **Responsive Design** with Tailwind CSS
+- **MongoDB Integration** for persona storage
+- **Advanced Error Handling** and debugging tools
+- **API Testing Suite** with comprehensive diagnostics
 
-### 🎨 **Multimodal Content Creation**
-- **AI Image Generation**: DALL-E 3 integration for automatic visual content
-- **Text + Image Combinations**: Coordinated content creation across mediums
-- **Visual Storytelling**: Generate images that complement your text narrative
-
-### 🤖 **Autonomous Content Strategy**
-- **Content Calendar Planning**: AI generates comprehensive content schedules
-- **Trend Research**: Automatic identification of trending topics in your niche
-- **SEO Optimization**: Built-in content optimization for search engines
-- **Performance Prediction**: AI predicts content engagement before publishing
-
-### 📊 **Performance Analytics**
-- **Content Analysis**: Deep insights into what makes content perform
-- **Engagement Prediction**: AI-powered engagement score prediction
-- **Optimization Suggestions**: Data-driven recommendations for improvement
-- **A/B Testing Support**: Framework for testing content variations
-- **Real-time Generation**: Fast, responsive content creation
-
-### 🎨 **Multimodal Content Generation**
-- **Automatic Image Generation**: Creates relevant header images and illustrations using DALL-E 3
-- **Style-Aware Visuals**: Matches image style to content type (professional, creative, technical)
-- **Content Visualization**: Auto-generates charts and graphs for data-rich content
-- **Audio Generation**: Text-to-speech with voice cloning capabilities
-
-### 🌍 **Cultural Adaptation & Localization**
-- **Hinglish Support**: Natural Hindi-English code-switching for Indian audiences
-- **Regional Languages**: Support for Tamil, Bengali, Marathi with local idioms
-- **Cultural Context Engine**: Includes local references, festivals, and customs
-- **Target Audience Adaptation**: Content tailored for specific demographics
-
-### 🤖 **Autonomous Content Strategy**
-- **Trend Research**: AI automatically identifies trending topics in your niche
-- **Content Calendar**: 30-day automated content planning and scheduling
-- **Headline Generation**: Multiple variations optimized for engagement
-- **A/B Testing**: Generate content variants for performance testing
-
-### 📊 **Performance Analytics & Optimization**
-- **Content Performance Tracking**: Integrates with Google Analytics, Medium, social platforms
-- **Predictive Engagement Scoring**: AI predicts content performance before publishing
-- **Optimization Suggestions**: Real-time recommendations to improve content
-- **Performance Feedback Loop**: AI learns from your content's actual performance
-
-### 🛡️ **Enterprise-Grade Features**
-- **Bias Detection**: Configurable content safety and brand compliance
-- **Source Verification**: Auditable citation trails for fact-checking
-- **Brand Voice Consistency**: Maintains consistent tone across all content
-- **Team Collaboration**: Multi-user workspaces with role-based access
-- **Style-Aware Generation**: Toggle between generic AI responses and your personalized writing style
-- **Modern UI**: Clean, responsive design built with Tailwind CSS
-- **Real-time Generation**: Get instant AI responses with loading states and error handling
-- **Dark Mode**: Supports both light and dark themes
-- **Type-safe**: Built with TypeScript for better development experience
-
-## Technologies Used
-
-- **Next.js 15**: React framework with App Router
-- **TypeScript**: Type-safe JavaScript development
-- **Tailwind CSS**: Utility-first CSS framework
-- **Google Generative AI**: AI text generation
-- **In-Memory Database**: Temporary storage for writing styles (can be upgraded to Prisma + SQLite)
-- **Lucide React**: Beautiful icon library
-
-## Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
-
-- Node.js 18+ installed on your machine
-- Google API key (get one from [Google AI Studio](https://aistudio.google.com/app/apikey))
+- Node.js 18+ 
+- MongoDB database
+- Google Gemini API key
+- OpenRouter API key (optional, for alternative models)
 
 ### Installation
 
-1. Clone the repository or download the project files
-2. Install dependencies:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Agam0795/Kalam-AI.git
+   cd Kalam-AI
+   ```
+
+2. **Install dependencies:**
    ```bash
    npm install
    ```
 
-3. Create environment variables:
-   ```bash
-   cp .env.example .env.local
+3. **Set up environment variables:**
+   Create a `.env.local` file in the root directory:
+   ```env
+   # Google/Gemini API Key
+   GOOGLE_API_KEY=your_google_api_key_here
+   
+   # Alternative API Key (OpenRouter)
+   ALTERNATIVE_API_KEY=your_openrouter_key_here
+   
+   # Database
+   MONGODB_URI=your_mongodb_connection_string
+   
+   # Next.js Configuration
+   NEXTAUTH_SECRET=your_nextauth_secret_here
+   NEXTAUTH_URL=http://localhost:3000
    ```
 
-4. Add your Google API key to `.env.local`:
-   ```
-   GOOGLE_API_KEY=your_actual_google_api_key_here
-   ```
-
-### Running the Application
-
-1. Start the development server:
+4. **Start the development server:**
    ```bash
    npm run dev
+   # or use the startup script
+   ./start.bat  # Windows
+   ./start.sh   # Linux/Mac
    ```
 
-2. Open [http://localhost:3000](http://localhost:3000) in your browser
+5. **Open your browser:**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-## Usage
+## 📱 Application Structure
 
-### Basic Text Generation
-1. **Enter Language (Optional)**: Specify the language you want the AI to respond in (e.g., "English", "Spanish", "French", "Arabic")
-2. **Enter Your Prompt**: Type your prompt or topic in the text area
-3. **Generate**: Click the "Generate Text" button or press Enter to get AI-generated content
-4. **View Response**: The generated text will appear in the right panel
+### Pages
+- **`/`** - Home page with main text generation interface
+- **`/chat`** - Basic Google Gemini chat interface
+- **`/enhanced-chat`** - Multi-provider chat with model selection
+- **`/humanizer`** - Advanced text humanization tool
+- **`/personas`** - AI persona management dashboard
+- **`/debug`** - API testing and diagnostics
 
-### Setting Up Your Writing Style
-1. **Upload Writing Style**: Click the "Upload Your Writing Style" button
-2. **Add Title**: Give your writing sample a descriptive title
-3. **Select Language & Category**: Choose the language and category (Blog, Academic, Creative, etc.)
-4. **Paste Your Writing**: Add a sample of your writing (200-500 words recommended)
-5. **Save**: Click "Save Writing Style" to store it in the database
+### API Endpoints
+- **`/api/generate`** - Main text generation
+- **`/api/chat`** - Google Gemini chat
+- **`/api/chat-alternative`** - OpenRouter alternative APIs
+- **`/api/humanize-text`** - Basic text humanization
+- **`/api/humanize-with-persona`** - Persona-enhanced humanization
+- **`/api/personas`** - Persona CRUD operations
+- **`/api/health-check`** - System health monitoring
 
-### Generating in Your Style
-1. **Enable Style Toggle**: Check "Use My Writing Style" before generating
-2. **Enter Your Prompt**: The AI will now use your stored writing samples as style examples
-3. **Generate**: Get content that matches your personal writing style, tone, and vocabulary
+## 🎨 Text Humanization
 
-### Example Prompts
+The advanced text humanization feature transforms AI-generated content using sophisticated linguistic analysis:
 
-- "Write an article about renewable energy"
-- "Explain quantum computing in simple terms"
-- "Create a business plan for a coffee shop"
-- "Write a poem about nature"
-- "Summarize the benefits of meditation"
+### Humanization Principles
+- **Sentence Structure Variation** - Mix short and long sentences for natural rhythm
+- **Personality Injection** - Add distinct voice and tone characteristics
+- **Colloquial Language** - Use contractions and natural expressions
+- **Active Voice Priority** - Convert passive constructions to active voice
+- **Subtle Imperfections** - Add natural human writing patterns
+- **Concrete Examples** - Replace abstract statements with specific details
 
-## API Configuration
+### Persona Integration
+- Create custom writing personas from sample texts
+- 5-dimensional linguistic fingerprinting
+- Style emulation and adaptation
+- Vocabulary and tone matching
 
-The application uses Google's Gemini 1.5 Flash model by default. You can modify the model in `/src/app/api/generate/route.ts`:
+## 🧠 AI Providers
 
-```typescript
-const model = genAI.getGenerativeModel({ 
-  model: "gemini-1.5-flash" // or "gemini-1.5-pro" for better quality
-});
-```
+### Google Gemini (Primary)
+- Model: `gemini-1.5-flash`
+- Fast response times
+- High-quality text generation
+- Advanced reasoning capabilities
 
-## Project Structure
+### OpenRouter (Alternative)
+- Multiple model options:
+  - Llama 3.1 8B Instruct
+  - Gemma 2 9B Instruct
+  - Phi-3 Mini 128K Instruct
+- Fallback option for Gemini
+- Cost-effective alternatives
 
+## 🔧 Development
+
+### Project Structure
 ```
 src/
-├── app/
-│   ├── api/
-│   │   └── generate/
-│   │       └── route.ts     # AI text generation API endpoint
-│   ├── globals.css          # Global styles
-│   ├── layout.tsx           # Root layout component
-│   └── page.tsx             # Main application page
-└── components/              # Reusable components (if any)
+├── app/                    # Next.js app router pages
+│   ├── api/               # API routes
+│   ├── chat/              # Chat pages
+│   ├── humanizer/         # Text humanizer
+│   └── personas/          # Persona management
+├── components/            # React components
+│   ├── ChatBot.tsx        # Basic chat interface
+│   ├── EnhancedChatBot.tsx # Multi-provider chat
+│   ├── TextHumanizer.tsx  # Humanization interface
+│   └── Navigation.tsx     # Site navigation
+├── lib/                   # Utility libraries
+│   ├── mongodb.ts         # Database connection
+│   ├── styleAnalyzer.ts   # Linguistic analysis
+│   └── advancedStyleAnalyzer.ts # Enhanced analysis
+└── models/                # Database models
+    └── StylePersona.ts    # Persona schema
 ```
 
-## Environment Variables
+### Key Technologies
+- **Frontend**: Next.js 15, React 19, TypeScript, Tailwind CSS
+- **Backend**: Next.js API routes, MongoDB, Mongoose
+- **AI/ML**: Google Generative AI, OpenRouter API
+- **Icons**: Lucide React
+- **Styling**: Tailwind CSS with responsive design
+
+## 🔍 Debugging
+
+Access the debug interface at `/debug` to test:
+- API connectivity
+- Google API integration
+- Humanization functionality
+- System health status
+
+## 📝 Environment Variables
 
 | Variable | Description | Required |
 |----------|-------------|----------|
-| `GOOGLE_API_KEY` | Your Google Gemini API key | Yes |
+| `GOOGLE_API_KEY` | Google Gemini API key | ✅ Yes |
+| `ALTERNATIVE_API_KEY` | OpenRouter API key | ❌ Optional |
+| `MONGODB_URI` | MongoDB connection string | ✅ Yes |
+| `NEXTAUTH_SECRET` | NextAuth secret key | ✅ Yes |
+| `NEXTAUTH_URL` | Application URL | ✅ Yes |
 
-## Error Handling
-
-The application includes comprehensive error handling for common scenarios:
-
-- Missing API key configuration
-- API quota exceeded
-- Invalid API key
-- Network errors
-- Empty prompts
-
-## Deployment
-
-### Vercel (Recommended)
-
-1. Push your code to a GitHub repository
-2. Connect your repository to [Vercel](https://vercel.com)
-3. Add your `GOOGLE_API_KEY` environment variable in Vercel's dashboard
-4. Deploy automatically
-
-### Other Platforms
-
-The application can be deployed to any platform that supports Next.js:
-- Netlify
-- AWS Amplify
-- Railway
-- Render
-
-## Contributing
+## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
 
-## License
+## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Support
+## 🙏 Acknowledgments
+
+- Google Gemini AI for powerful text generation
+- OpenRouter for alternative AI model access
+- Next.js team for the excellent framework
+- Tailwind CSS for beautiful styling
+- MongoDB for reliable data storage
+
+## 🐛 Known Issues & Solutions
+
+- **"Failed to humanize text"** - Ensure Google API key is properly configured and has Gemini API access
+- **Build errors** - Run `npm install` to ensure all dependencies are installed
+- **Port conflicts** - Default port is 3000, change in `next.config.js` if needed
+
+## 📞 Support
 
 If you encounter any issues or have questions:
+1. Check the `/debug` page for API connectivity
+2. Review the console logs for error details
+3. Ensure all environment variables are correctly set
+4. Create an issue on GitHub with detailed error information
 
-1. Check the console for error messages
-2. Verify your Google API key is correct
-3. Ensure you have enabled the Gemini API in Google Cloud Console
-4. Check your internet connection
+---
 
-## Database Notes
-
-Currently, the application uses in-memory storage for writing styles, which means your uploaded writing samples will be lost when the server restarts. This was implemented to avoid Prisma setup complexity.
-
-### To Enable Persistent Database:
-1. Run `npm install prisma @prisma/client`
-2. Run `npx prisma generate`
-3. Run `npx prisma db push`
-4. Replace the content in `src/lib/db.ts` with proper Prisma client code
-5. Restart the development server
-
-Your writing styles will then be permanently stored in a SQLite database.
+Built with ❤️ by [Agam0795](https://github.com/Agam0795)

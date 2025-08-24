@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Upload, Save, FileText, X } from 'lucide-react';
 
 interface WritingStyleUploadProps {
@@ -16,10 +16,12 @@ export default function WritingStyleUpload({ onClose, onSave }: WritingStyleUplo
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const [file, setFile] = useState<File | null>(null);
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   const handleSave = async () => {
-    if (!title.trim() || !content.trim()) {
-      setError('Please provide both title and content');
+    if (!title.trim() && !content.trim() && !file) {
+      setError('Please provide a title and either paste text or select a file');
       return;
     }
 
@@ -28,18 +30,29 @@ export default function WritingStyleUpload({ onClose, onSave }: WritingStyleUplo
     setSuccess('');
 
     try {
-      const response = await fetch('/api/writing-style', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          title: title.trim(),
-          content: content.trim(),
-          language,
-          category,
-        }),
-      });
+      let response: Response;
+      if (file) {
+        // Use multipart/form-data when uploading a file
+        const form = new FormData();
+        form.set('title', title.trim());
+        form.set('language', language);
+        form.set('category', category);
+        if (content.trim()) form.set('content', content.trim());
+        form.set('file', file);
+        response = await fetch('/api/writing-style', { method: 'POST', body: form });
+      } else {
+        // Fallback to JSON when only text is provided
+        response = await fetch('/api/writing-style', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            title: title.trim(),
+            content: content.trim(),
+            language,
+            category,
+          }),
+        });
+      }
 
       const data = await response.json();
 
@@ -48,8 +61,10 @@ export default function WritingStyleUpload({ onClose, onSave }: WritingStyleUplo
       }
 
       setSuccess('Writing style saved successfully!');
-      setTitle('');
-      setContent('');
+  setTitle('');
+  setContent('');
+  setFile(null);
+  if (fileInputRef.current) fileInputRef.current.value = '';
       onSave();
       
       // Auto close after success
@@ -95,10 +110,26 @@ export default function WritingStyleUpload({ onClose, onSave }: WritingStyleUplo
               onChange={(e) => setTitle(e.target.value)}
               placeholder="e.g., 'My Blog Post About Technology'"
               className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+              spellCheck="false"
+              data-ms-editor="true"
             />
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label htmlFor="file" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Optional: Upload a .txt or .md file
+              </label>
+              <input
+                id="file"
+                ref={fileInputRef}
+                type="file"
+                accept=".txt,.md,.markdown,text/plain"
+                onChange={(e) => setFile(e.target.files && e.target.files[0] ? e.target.files[0] : null)}
+                className="block w-full text-sm text-gray-700 dark:text-gray-300 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 dark:file:bg-gray-700 dark:file:text-gray-200"
+              />
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">We’ll extract the text and combine it with anything you paste below.</p>
+            </div>
             <div>
               <label htmlFor="language" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Language
@@ -110,8 +141,13 @@ export default function WritingStyleUpload({ onClose, onSave }: WritingStyleUplo
                 onChange={(e) => setLanguage(e.target.value)}
                 placeholder="e.g., English, Spanish"
                 className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+                spellCheck="false"
+                data-ms-editor="true"
               />
             </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label htmlFor="category" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Category
@@ -130,6 +166,18 @@ export default function WritingStyleUpload({ onClose, onSave }: WritingStyleUplo
                 <option value="Business">Business</option>
               </select>
             </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Source
+              </label>
+              <div className="text-xs text-gray-500 dark:text-gray-400">
+                {file ? (
+                  <span>Using file: {file.name}</span>
+                ) : (
+                  <span>Using pasted text below</span>
+                )}
+              </div>
+            </div>
           </div>
 
           <div>
@@ -143,6 +191,8 @@ export default function WritingStyleUpload({ onClose, onSave }: WritingStyleUplo
               placeholder="Paste a sample of your writing here. This will help the AI learn your writing style, tone, and vocabulary..."
               rows={12}
               className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none dark:bg-gray-700 dark:text-white"
+              spellCheck="false"
+              data-ms-editor="true"
             />
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
               Tip: Include at least 200-500 words for better style learning

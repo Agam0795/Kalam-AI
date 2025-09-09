@@ -1,10 +1,18 @@
 {
-  "hosting": {
-    "public": ".next",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  }
+  "hosting": [
+    {
+      "target": "app-static",
+      "public": "out",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    },
+    {
+      "target": "app-ssr",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
 }

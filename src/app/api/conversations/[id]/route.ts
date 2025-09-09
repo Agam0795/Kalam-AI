@@ -4,26 +4,30 @@ import { chatStore } from '@/lib/chatStore';
 
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || '');
 
-export async function GET(_req: NextRequest, { params }: { params: { id: string } }) {
-  const convo = chatStore.get(params.id);
+type ParamPromise = Promise<{ id: string }>; // align with other dynamic route signature style
+
+export async function GET(_req: NextRequest, { params }: { params: ParamPromise }) {
+  const { id } = await params;
+  const convo = chatStore.getConversation(id);
   if (!convo) return NextResponse.json({ error: 'Not found' }, { status: 404 });
   return NextResponse.json({ conversation: convo });
 }
 
-export async function POST(req: NextRequest, { params }: { params: { id: string } }) {
+export async function POST(req: NextRequest, { params }: { params: ParamPromise }) {
+  const { id } = await params;
   const body = await req.json().catch(() => ({}));
   const { message } = body as { message?: string };
   if (!message?.trim()) return NextResponse.json({ error: 'message required' }, { status: 400 });
 
-  const convo = chatStore.get(params.id);
+  const convo = chatStore.getConversation(id);
   if (!convo) return NextResponse.json({ error: 'Not found' }, { status: 404 });
 
-  chatStore.addMessage(convo.id, 'user', message.trim());
+  chatStore.addMessages(convo.id, [{ role: 'user', content: message.trim(), timestamp: new Date().toISOString() }]);
 
-  // build prompt from last 12 messages
-  const history = (chatStore.get(convo.id)?.messages || [])
+  const updated = chatStore.getConversation(convo.id);
+  const history = (updated?.messages || [])
     .slice(-12)
-    .map(m => `${m.role === 'user' ? 'Human' : 'Assistant'}: ${m.content}`)
+    .map((m: any) => `${m.role === 'user' ? 'Human' : 'Assistant'}: ${m.content}`)
     .join('\n');
   const prompt = `${history}\nAssistant:`;
 
@@ -31,17 +35,19 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
   try {
     const result = await model.generateContent(prompt);
     const text = result.response.text();
-    const ai = chatStore.addMessage(convo.id, 'assistant', text.trim());
-    return NextResponse.json({ message: ai, conversation: { id: convo.id, updatedAt: chatStore.get(convo.id)?.updatedAt } });
+    chatStore.addMessages(convo.id, [{ role: 'assistant', content: text.trim(), timestamp: new Date().toISOString() }]);
+    const final = chatStore.getConversation(convo.id);
+    return NextResponse.json({ conversation: final });
   } catch (e: any) {
     return NextResponse.json({ error: e?.message || 'generation failed' }, { status: 500 });
   }
 }
 
-export async function PATCH(req: NextRequest, { params }: { params: { id: string } }) {
+export async function PATCH(req: NextRequest, { params }: { params: ParamPromise }) {
+  const { id } = await params;
   const { title } = await req.json().catch(() => ({}));
   if (!title) return NextResponse.json({ error: 'title required' }, { status: 400 });
-  const c = chatStore.rename(params.id, String(title));
+  const c = chatStore.renameConversation(id, String(title));
   if (!c) return NextResponse.json({ error: 'Not found' }, { status: 404 });
   return NextResponse.json({ conversation: c });
 }

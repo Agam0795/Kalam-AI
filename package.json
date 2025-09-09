@@ -5,9 +5,6 @@
   "scripts": {
     "dev": "next dev --turbopack",
   "build": "next build",
-  "build:export": "cross-env NEXT_OUTPUT=export next build",
-  "deploy:ssr": "npm run build && firebase deploy --only hosting:app-ssr",
-  "deploy:export": "npm run build:export && firebase deploy --only hosting:app-static",
     "start": "next start",
     "lint": "next lint",
     "migrate:personas": "node scripts/migrate-personas.js",

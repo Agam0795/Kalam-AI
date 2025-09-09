@@ -1,18 +1,6 @@
 {
-  "hosting": [
-    {
-      "target": "app-static",
-      "public": "out",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ]
-    },
-    {
-      "target": "app-ssr",
-      "source": ".",
-      "frameworksBackend": {}
-    }
-  ]
+  "hosting": {
+    "source": ".",
+    "frameworksBackend": {}
+  }
 }

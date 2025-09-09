@@ -1,7 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
-import connectDB from '@/lib/mongodb';
+// Force Node runtime & dynamic rendering to avoid static HTML fallback that leads to Unexpected token '<'
+export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
+// Using direct path to avoid module resolution issues with '@/lib/mongodb' shim
+import connectDB from '@/lib/database/mongodb';
 import StylePersona from '@/models/StylePersona';
-import { linguisticPersonaEmulator, type LinguisticFingerprint } from '@/lib/advancedStyleAnalyzer';
+// Import directly from analyzers implementation to avoid shim resolution issue
+import { linguisticPersonaEmulator, type LinguisticFingerprint } from '@/lib/analyzers/advancedStyleAnalyzer';
 
 // Function to generate humanized persona prompts
 function generateHumanizedPersonaPrompt(fingerprint: LinguisticFingerprint, task: string): string {
@@ -56,12 +61,30 @@ function generateHumanizedPersonaPrompt(fingerprint: LinguisticFingerprint, task
 }
 
 export async function GET(request: NextRequest) {
+  const started = Date.now();
+  let dbConnected = false;
   try {
     await connectDB();
+    dbConnected = true;
 
     const url = new URL(request.url);
     const personaId = url.searchParams.get('id');
     const task = url.searchParams.get('task');
+    const health = url.searchParams.get('health');
+    const debug = url.searchParams.get('debug');
+
+    if (health === '1') {
+      return NextResponse.json({
+        ok: true,
+        route: '/api/persona-style',
+        dbConnected,
+        env: {
+          googleAuthConfigured: !!(process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET)
+        },
+        timestamp: new Date().toISOString(),
+        durationMs: Date.now() - started
+      });
+    }
 
     if (!personaId) {
       return NextResponse.json(
@@ -70,9 +93,18 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    const persona = await StylePersona.findById(personaId).select('styleProfile linguisticFingerprint name status originalTexts');
+    const persona = await StylePersona.findById(personaId)
+      .select('styleProfile linguisticFingerprint name status originalTexts')
+      .lean() as unknown as {
+        _id: any;
+        name: string;
+        status: string;
+        styleProfile: Record<string, unknown>;
+        linguisticFingerprint?: LinguisticFingerprint;
+        originalTexts?: string[];
+      } | null;
 
-    if (!persona) {
+  if (!persona) {
       return NextResponse.json(
         { error: 'Persona not found' },
         { status: 404 }
@@ -138,13 +170,24 @@ export async function GET(request: NextRequest) {
       }
     }
 
-    return NextResponse.json(response);
+    if (debug === '1') {
+      (response as any)._debug = {
+        dbConnected,
+        durationMs: Date.now() - started,
+        hasLinguisticFingerprint: !!response.linguisticFingerprint,
+        personaIdRequested: personaId
+      };
+    }
+
+    return NextResponse.json(response, { status: 200 });
 
   } catch (error) {
     console.error('Error fetching persona style:', error);
-    return NextResponse.json(
-      { error: 'Failed to fetch persona style' },
-      { status: 500 }
-    );
+    return NextResponse.json({
+      error: 'Failed to fetch persona style',
+      details: error instanceof Error ? error.message : 'Unknown error',
+      dbConnected,
+      durationMs: Date.now() - started
+    }, { status: 500 });
   }
 }

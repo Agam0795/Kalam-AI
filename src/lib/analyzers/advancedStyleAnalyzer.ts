@@ -637,3 +637,6 @@ export const linguisticPersonaEmulator = new LinguisticPersonaEmulator();
 
 // Type alias for backward compatibility
 export type StyleAnalysis = LinguisticFingerprint;
+
+// Provide a default export for backward compatibility with legacy default imports
+export default LinguisticPersonaEmulator;

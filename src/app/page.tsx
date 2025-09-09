@@ -4,8 +4,8 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import Image from "next/image";
 import heroImg from "./kalam-hero.png";
 import { Send, Loader2, MessageSquare, Languages, Upload, Settings } from "lucide-react";
-import WritingStyleUpload from "@/components/WritingStyleUpload";
-import AcademicPaperSearch from "@/components/AcademicPaperSearch";
+import WritingStyleUpload from "@/components/tools/WritingStyleUpload";
+import AcademicPaperSearch from "@/components/tools/AcademicPaperSearch";
 import StylePersonasDashboard from "@/components/StylePersonasDashboard";
 import { useSession, signIn, signOut } from "next-auth/react";
 

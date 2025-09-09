@@ -1,5 +1,5 @@
 import mongoose, { Schema, Document } from 'mongoose';
-import { LinguisticFingerprint } from '@/lib/advancedStyleAnalyzer';
+import { LinguisticFingerprint } from '@/lib/analyzers/advancedStyleAnalyzer';
 
 // Style Profile sub-schema (legacy)
 const StyleProfileSchema = new Schema(

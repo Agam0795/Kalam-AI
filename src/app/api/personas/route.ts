@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import connectDB from '@/lib/mongodb';
+// Using direct path to avoid module resolution issues with '@/lib/mongodb' shim
+import connectDB from '@/lib/database/mongodb';
 import StylePersona from '@/models/StylePersona';
 import { Types } from 'mongoose';
 import { listPersonas, getPersona as getPersonaFile, savePersona as savePersonaFile, deletePersona as deletePersonaFile } from '@/lib/filePersonaStore';

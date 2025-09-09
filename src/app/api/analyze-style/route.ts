@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { linguisticPersonaEmulator, LinguisticFingerprint } from '@/lib/advancedStyleAnalyzer';
+import { linguisticPersonaEmulator, LinguisticFingerprint } from '@/lib/analyzers/advancedStyleAnalyzer';
 
 export async function POST(request: NextRequest) {
   try {

@@ -1,17 +1,17 @@
 // Simple in-memory chat store. Replace with Prisma when ready.
 
-export type Role = 'user' | 'assistant';
+export type Role = 'user' | 'assistant' | 'system';
 
 export interface ChatMessage {
   id: string;
   role: Role;
   content: string;
-  timestamp: string; // ISO
+  timestamp: string; // ISO string
 }
 
 export interface Conversation {
   id: string;
-  userId?: string;
+  userId?: string; // "anonymous" if not signed in
   title: string;
   createdAt: string; // ISO
   updatedAt: string; // ISO
@@ -25,57 +25,11 @@ function uid() {
 // eslint-disable-next-line no-var
 var conversations: Conversation[] = [];
 
-export const chatStore = {
-  uid,
-  list(): Conversation[] {
-    return conversations;
-  },
-  get(id: string): Conversation | undefined {
-    return conversations.find(c => c.id === id);
-  },
-  create(title = 'New chat', userId?: string): Conversation {
-    const now = new Date().toISOString();
-    const convo: Conversation = { id: uid(), title, createdAt: now, updatedAt: now, messages: [], userId };
-    conversations.unshift(convo);
-    return convo;
-  },
-  delete(id: string) {
-    conversations = conversations.filter(c => c.id !== id);
-  },
-  rename(id: string, title: string) {
-    const c = this.get(id);
-    if (c) { c.title = title; c.updatedAt = new Date().toISOString(); }
-    return c;
-  },
-  addMessage(id: string, role: Role, content: string): ChatMessage | undefined {
-    const c = this.get(id);
-    if (!c) return undefined;
-    const msg: ChatMessage = { id: uid(), role, content, timestamp: new Date().toISOString() };
-    c.messages.push(msg);
-    c.updatedAt = msg.timestamp;
-    return msg;
-  }
-};
+// Removed duplicate in-memory chatStore export. Only file-backed chatStore remains below.
 import fs from 'fs';
 import path from 'path';
 
-export type ChatRole = 'user' | 'assistant' | 'system';
-
-export interface ChatMessage {
-  id: string;
-  role: ChatRole;
-  content: string;
-  timestamp: string; // ISO string
-}
-
-export interface Conversation {
-  id: string;
-  title: string;
-  userId: string; // "anonymous" if not signed in
-  createdAt: string; // ISO
-  updatedAt: string; // ISO
-  messages: ChatMessage[];
-}
+// Removed duplicate ChatRole, ChatMessage, and Conversation definitions. Unified above.
 
 interface ChatDBSchema {
   conversations: Conversation[];

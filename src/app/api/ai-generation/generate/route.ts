@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { PrismaClient } from '@prisma/client';
+import { safeJson } from '@/lib/safeJson';
 
 const prisma = new PrismaClient();
 
@@ -34,7 +35,7 @@ export async function POST(request: NextRequest) {
       : 'You are a helpful AI assistant. Generate detailed, informative, and well-structured content based on the user\'s prompt.';
 
     // Handle style persona selection
-    if (selectedPersona && selectedPersona !== 'default') {
+  if (selectedPersona && selectedPersona !== 'default') {
       if (selectedPersona === 'human-writer') {
         // Advanced Human Writer style with comprehensive natural language patterns
         systemPrompt += `\n\nYou are an AI agent with the persona of a skilled and versatile human writer. Your primary directive is to generate text that is functionally and stylistically indistinguishable from content written by a thoughtful, articulate, and native-speaking human. Your goal is not merely to provide information but to communicate it with an authentic voice, rhythm, and personality.
@@ -75,15 +76,38 @@ Write with authentic human voice, natural rhythm, and engaging personality. Make
         // For now, just add a note about personal style since we don't have Prisma set up
         systemPrompt += `\n\nIMPORTANT: Please write in a personal, conversational style that feels natural and authentic.`;
       } else {
-        // Use selected academic persona
+        // Use selected academic persona with safe JSON fetch (helps diagnose Unexpected token '<' issues)
         try {
-          const personaResponse = await fetch(`${request.nextUrl.origin}/api/persona-style?id=${selectedPersona}`);
-          
-          if (personaResponse.ok) {
-            const personaData = await personaResponse.json();
-            const { styleProfile } = personaData;
-            
-            systemPrompt += `\n\nIMPORTANT: Write in the academic style of "${personaData.name}" based on this analysis:
+          const personaUrl = `${request.nextUrl.origin}/api/persona-style?id=${selectedPersona}`;
+          console.log('Fetching persona style from', personaUrl);
+
+          // Up to 2 retries if we detect HTML/non-JSON or server errors
+          const maxAttempts = 3;
+            let personaData: any = null;
+            let lastIssue: any = null;
+            for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+              const resp = await fetch(personaUrl, { headers: { Accept: 'application/json' }, cache: 'no-store' });
+              const ct = resp.headers.get('content-type') || '';
+              const parsed = await safeJson(resp as unknown as Response);
+              if ('data' in parsed && parsed.data && (parsed.data as any).styleProfile) {
+                personaData = parsed.data;
+                break;
+              }
+              // Capture why it failed
+              lastIssue = parsed;
+              const htmlLike = ct.includes('text/html') || (('rawSnippet' in parsed) && parsed.rawSnippet?.startsWith('<!DOCTYPE'));
+              const retriable = resp.status >= 500 || htmlLike;
+              console.warn(`Persona style attempt ${attempt} failed`, { status: resp.status, ct, htmlLike, parsed });
+              if (!retriable || attempt === maxAttempts) {
+                break;
+              }
+              // small backoff
+              await new Promise(r => setTimeout(r, 150 * attempt));
+            }
+
+            if (personaData) {
+              const { styleProfile } = personaData;
+              systemPrompt += `\n\nIMPORTANT: Write in the academic style of "${personaData.name}" based on this analysis:
 
 TONE: ${styleProfile.tone}
 SENTENCE STYLE: ${styleProfile.sentenceStyle}
@@ -91,7 +115,7 @@ COMPLEXITY: ${styleProfile.complexity}
 FORMALITY LEVEL: ${styleProfile.formalityLevel}
 VOCABULARY LEVEL: ${styleProfile.vocabularyLevel || 'Academic'}
 
-KEY VOCABULARY TO USE: ${styleProfile.keywords.join(', ')}
+KEY VOCABULARY TO USE: ${(styleProfile.keywords || []).join(', ')}
 
 WRITING PATTERNS TO FOLLOW:
 ${styleProfile.writingPatterns?.join('\n- ') || '- Technical precision\n- Evidence-based arguments'}
@@ -100,11 +124,11 @@ STRUCTURAL PREFERENCES:
 ${styleProfile.structuralPreferences?.join('\n- ') || '- Logical progression\n- Clear methodology'}
 
 Emulate this specific academic writing style while maintaining clarity and accuracy.`;
-          } else {
-            console.log('Failed to fetch persona style, falling back to default');
-          }
+            } else {
+              console.warn('Skipping persona style injection; lastIssue =', lastIssue);
+            }
         } catch (error) {
-          console.error('Error fetching persona style:', error);
+          console.error('Error fetching persona style (robust path):', error);
         }
       }
     }

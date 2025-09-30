@@ -287,17 +287,17 @@ export default function Page() {
             <span className="brand-name">Kalam AI</span>
           </div>
           <div className="footer-links">
-            <a href="https://github.com/Agam0795" target="_blank" rel="noreferrer" className="social" aria-label="GitHub">
+            <a href="https://github.com/Agam0795" target="_blank" rel="noopener noreferrer" className="social" aria-label="GitHub">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
                 <path d="M12 .5a12 12 0 00-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.76-1.6-2.67-.31-5.47-1.34-5.47-5.98 0-1.32.47-2.39 1.24-3.23-.12-.3-.54-1.54.12-3.2 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.9.12 3.2.77.84 1.24 1.9 1.24 3.23 0 4.65-2.8 5.66-5.48 5.97.44.38.82 1.13.82 2.28v3.38c0 .32.22.69.83.57A12 12 0 0012 .5z" />
               </svg>
             </a>
-            <a href="https://x.com" target="_blank" rel="noreferrer" className="social" aria-label="X (Twitter)">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="social" aria-label="X (Twitter)">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
                 <path d="M20 3h-3l-4 5-4-5H6l5 7-6 8h3l4-5 4 5h3l-5-7 6-8z" />
               </svg>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="social" aria-label="LinkedIn">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social" aria-label="LinkedIn">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
                 <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v15H0V8zm7.5 0H12v2.1C12.7 9.4 14 8 16.4 8 21 8 21 11.3 21 15.6V23h-5v-6.3c0-1.5 0-3.3-2-3.3s-2.3 1.6-2.3 3.2V23h-4.9V8z" />
               </svg>

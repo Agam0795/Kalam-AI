@@ -31,7 +31,7 @@ export async function POST(req: NextRequest, { params }: { params: ParamPromise 
     .join('\n');
   const prompt = `${history}\nAssistant:`;
 
-  const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash-latest' });
+  const model = genAI.getGenerativeModel({ model: 'models/gemini-2.0-flash-001' });
   try {
     const result = await model.generateContent(prompt);
     const text = result.response.text();

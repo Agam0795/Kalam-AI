@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
 
     // Get the generative model
     const model = genAI.getGenerativeModel({ 
-      model: 'gemini-1.5-flash-latest',
+      model: 'models/gemini-2.0-flash-001',
       generationConfig: {
         temperature: temperature,
         maxOutputTokens: maxTokens,
@@ -81,7 +81,7 @@ export async function POST(request: NextRequest) {
       conversationId: generateConversationId(),
       usage: {
         totalTokens: conversationContext.length + aiResponse.length,
-        model: 'gemini-pro'
+        model: 'models/gemini-2.0-flash-001'
       }
     });
 
@@ -123,7 +123,7 @@ function generateConversationId(): string {
 export async function GET() {
   return NextResponse.json({
     status: 'Chat API is running',
-    model: 'gemini-pro',
+    model: 'models/gemini-2.0-flash-001',
     features: [
       'Conversation history support',
       'System prompts',

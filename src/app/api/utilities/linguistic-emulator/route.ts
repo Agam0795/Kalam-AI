@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
       try {
         console.log('Generating sample text using persona...');
         const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
+        const model = genAI.getGenerativeModel({ model: "models/gemini-2.0-flash-001" });
         
         const result = await model.generateContent(personaPrompt);
         sampleGeneration = result.response.text();

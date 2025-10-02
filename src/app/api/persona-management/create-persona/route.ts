@@ -98,7 +98,7 @@ async function processPersonaAnalysis(personaId: string, selectedPapers: CreateP
     await connectDB();
 
     const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY!);
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash-latest' });
+    const model = genAI.getGenerativeModel({ model: 'models/gemini-2.0-flash-001' });
 
     // Analyze each paper's abstract and extract writing patterns
     const paperAnalyses = await Promise.all(
